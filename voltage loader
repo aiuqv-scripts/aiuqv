@@ -7,82 +7,454 @@
  Y888P  ~Y8888P' Y888888P      888888D      Y88888P ~Y8888P' YP   YP  CONVERTER 
 ]=]
 
--- Instances: 6 | Scripts: 1 | Modules: 0 | Tags: 0
+-- Instances: 39 | Scripts: 7 | Modules: 0 | Tags: 0
 local G2L = {};
 
 -- StarterGui.voltage loading screen
 G2L["1"] = Instance.new("ScreenGui", game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui"));
+G2L["1"]["IgnoreGuiInset"] = true;
+G2L["1"]["ScreenInsets"] = Enum.ScreenInsets.DeviceSafeInsets;
 G2L["1"]["Name"] = [[voltage loading screen]];
 G2L["1"]["ZIndexBehavior"] = Enum.ZIndexBehavior.Sibling;
+G2L["1"]["ResetOnSpawn"] = false;
 
 
--- StarterGui.voltage loading screen.Frame
+-- StarterGui.voltage loading screen.MainFrame
 G2L["2"] = Instance.new("Frame", G2L["1"]);
 G2L["2"]["Visible"] = false;
 G2L["2"]["BorderSizePixel"] = 0;
-G2L["2"]["BackgroundColor3"] = Color3.fromRGB(47, 0, 67);
-G2L["2"]["Size"] = UDim2.new(0, 3362, 0, 1621);
-G2L["2"]["Position"] = UDim2.new(-0.37544, 0, -0.28675, 0);
-G2L["2"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["2"]["BackgroundTransparency"] = 0.4;
+G2L["2"]["BackgroundColor3"] = Color3.fromRGB(55, 8, 84);
+G2L["2"]["Size"] = UDim2.new(1, 0, 1, 0);
+G2L["2"]["BorderColor3"] = Color3.fromRGB(28, 43, 54);
+G2L["2"]["Name"] = [[MainFrame]];
 
 
--- StarterGui.voltage loading screen.Frame.loader
-G2L["3"] = Instance.new("TextButton", G2L["2"]);
+-- StarterGui.voltage loading screen.MainFrame.Title
+G2L["3"] = Instance.new("TextLabel", G2L["2"]);
 G2L["3"]["TextWrapped"] = true;
 G2L["3"]["TextStrokeTransparency"] = 0;
-G2L["3"]["BorderSizePixel"] = 0;
-G2L["3"]["TextStrokeColor3"] = Color3.fromRGB(175, 0, 244);
 G2L["3"]["TextSize"] = 14;
+G2L["3"]["TextStrokeColor3"] = Color3.fromRGB(55, 8, 84);
 G2L["3"]["TextScaled"] = true;
+G2L["3"]["BackgroundColor3"] = Color3.fromRGB(55, 8, 84);
+G2L["3"]["FontFace"] = Font.new([[rbxasset://fonts/families/FredokaOne.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
 G2L["3"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["3"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["3"]["FontFace"] = Font.new([[rbxasset://fonts/families/Zekton.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["3"]["Size"] = UDim2.new(0, 364, 0, 337);
-G2L["3"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["3"]["Text"] = [[Load Voltage]];
-G2L["3"]["Name"] = [[loader]];
-G2L["3"]["Position"] = UDim2.new(0.24003, 0, 0.29843, 0);
+G2L["3"]["BackgroundTransparency"] = 1;
+G2L["3"]["Size"] = UDim2.new(0.63253, 0, 0.16535, 0);
+G2L["3"]["BorderColor3"] = Color3.fromRGB(28, 43, 54);
+G2L["3"]["Text"] = [[Voltage]];
+G2L["3"]["Name"] = [[Title]];
+G2L["3"]["Position"] = UDim2.new(0.19036, 0, 0.32338, 0);
 
 
--- StarterGui.voltage loading screen.Frame.loader.UICorner
-G2L["4"] = Instance.new("UICorner", G2L["3"]);
-G2L["4"]["CornerRadius"] = UDim.new(1, 0);
+-- StarterGui.voltage loading screen.MainFrame.Dots
+G2L["4"] = Instance.new("Frame", G2L["2"]);
+G2L["4"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["4"]["Size"] = UDim2.new(0.05717, 0, 0.03607, 0);
+G2L["4"]["Position"] = UDim2.new(0.47097, 0, 0.81861, 0);
+G2L["4"]["BorderColor3"] = Color3.fromRGB(28, 43, 54);
+G2L["4"]["Name"] = [[Dots]];
+G2L["4"]["BackgroundTransparency"] = 1;
 
 
--- StarterGui.voltage loading screen.Frame.loader.UIStroke
-G2L["5"] = Instance.new("UIStroke", G2L["3"]);
-G2L["5"]["Thickness"] = 5;
-G2L["5"]["Color"] = Color3.fromRGB(175, 0, 244);
-G2L["5"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
+-- StarterGui.voltage loading screen.MainFrame.Dots.Dot1
+G2L["5"] = Instance.new("Frame", G2L["4"]);
+G2L["5"]["BackgroundColor3"] = Color3.fromRGB(55, 8, 84);
+G2L["5"]["Size"] = UDim2.new(0.15929, 0, 0.51159, 0);
+G2L["5"]["Position"] = UDim2.new(0.06117, 0, 0.23445, 0);
+G2L["5"]["BorderColor3"] = Color3.fromRGB(28, 43, 54);
+G2L["5"]["Name"] = [[Dot1]];
 
 
--- StarterGui.voltage loading screen.Frame.loader.LocalScript
-G2L["6"] = Instance.new("LocalScript", G2L["3"]);
+-- StarterGui.voltage loading screen.MainFrame.Dots.Dot1.UICorner
+G2L["6"] = Instance.new("UICorner", G2L["5"]);
+G2L["6"]["CornerRadius"] = UDim.new(0.5, 0);
+
+
+-- StarterGui.voltage loading screen.MainFrame.Dots.Dot1.InsideDot
+G2L["7"] = Instance.new("Frame", G2L["5"]);
+G2L["7"]["BackgroundColor3"] = Color3.fromRGB(98, 14, 151);
+G2L["7"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
+G2L["7"]["Position"] = UDim2.new(0.5, 0, 0.5, 0);
+G2L["7"]["BorderColor3"] = Color3.fromRGB(28, 43, 54);
+G2L["7"]["Name"] = [[InsideDot]];
+
+
+-- StarterGui.voltage loading screen.MainFrame.Dots.Dot1.InsideDot.UICorner
+G2L["8"] = Instance.new("UICorner", G2L["7"]);
+G2L["8"]["CornerRadius"] = UDim.new(0.5, 0);
+
+
+-- StarterGui.voltage loading screen.MainFrame.Dots.Dot2
+G2L["9"] = Instance.new("Frame", G2L["4"]);
+G2L["9"]["BackgroundColor3"] = Color3.fromRGB(78, 11, 119);
+G2L["9"]["Size"] = UDim2.new(0.15929, 0, 0.51159, 0);
+G2L["9"]["Position"] = UDim2.new(0.41999, 0, 0.23445, 0);
+G2L["9"]["BorderColor3"] = Color3.fromRGB(28, 43, 54);
+G2L["9"]["Name"] = [[Dot2]];
+
+
+-- StarterGui.voltage loading screen.MainFrame.Dots.Dot2.UICorner
+G2L["a"] = Instance.new("UICorner", G2L["9"]);
+G2L["a"]["CornerRadius"] = UDim.new(0.5, 0);
+
+
+-- StarterGui.voltage loading screen.MainFrame.Dots.Dot2.InsideDot
+G2L["b"] = Instance.new("Frame", G2L["9"]);
+G2L["b"]["BackgroundColor3"] = Color3.fromRGB(55, 8, 84);
+G2L["b"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
+G2L["b"]["Position"] = UDim2.new(0.5, 0, 0.5, 0);
+G2L["b"]["BorderColor3"] = Color3.fromRGB(28, 43, 54);
+G2L["b"]["Name"] = [[InsideDot]];
+
+
+-- StarterGui.voltage loading screen.MainFrame.Dots.Dot2.InsideDot.UICorner
+G2L["c"] = Instance.new("UICorner", G2L["b"]);
+G2L["c"]["CornerRadius"] = UDim.new(0.5, 0);
+
+
+-- StarterGui.voltage loading screen.MainFrame.Dots.Dot3
+G2L["d"] = Instance.new("Frame", G2L["4"]);
+G2L["d"]["BackgroundColor3"] = Color3.fromRGB(98, 14, 151);
+G2L["d"]["Size"] = UDim2.new(0.15929, 0, 0.51159, 0);
+G2L["d"]["Position"] = UDim2.new(0.77881, 0, 0.23445, 0);
+G2L["d"]["BorderColor3"] = Color3.fromRGB(28, 43, 54);
+G2L["d"]["Name"] = [[Dot3]];
+
+
+-- StarterGui.voltage loading screen.MainFrame.Dots.Dot3.UICorner
+G2L["e"] = Instance.new("UICorner", G2L["d"]);
+G2L["e"]["CornerRadius"] = UDim.new(0.5, 0);
+
+
+-- StarterGui.voltage loading screen.MainFrame.Dots.Dot3.InsideDot
+G2L["f"] = Instance.new("Frame", G2L["d"]);
+G2L["f"]["BackgroundColor3"] = Color3.fromRGB(78, 11, 119);
+G2L["f"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
+G2L["f"]["Position"] = UDim2.new(0.5, 0, 0.5, 0);
+G2L["f"]["BorderColor3"] = Color3.fromRGB(28, 43, 54);
+G2L["f"]["Name"] = [[InsideDot]];
+
+
+-- StarterGui.voltage loading screen.MainFrame.Dots.Dot3.InsideDot.UICorner
+G2L["10"] = Instance.new("UICorner", G2L["f"]);
+G2L["10"]["CornerRadius"] = UDim.new(0.5, 0);
+
+
+-- StarterGui.voltage loading screen.MainFrame.Dots.Dots
+G2L["11"] = Instance.new("LocalScript", G2L["4"]);
+G2L["11"]["Name"] = [[Dots]];
+
+
+-- StarterGui.voltage loading screen.MainFrame.Manager
+G2L["12"] = Instance.new("LocalScript", G2L["2"]);
+G2L["12"]["Name"] = [[Manager]];
+
+
+-- StarterGui.voltage loading screen.MainFrame.Bar
+G2L["13"] = Instance.new("Frame", G2L["2"]);
+G2L["13"]["BorderSizePixel"] = 0;
+G2L["13"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["13"]["Size"] = UDim2.new(0.5609, 0, 0.03659, 0);
+G2L["13"]["Position"] = UDim2.new(0.21955, 0, 0.76497, 0);
+G2L["13"]["BorderColor3"] = Color3.fromRGB(28, 43, 54);
+G2L["13"]["Name"] = [[Bar]];
+
+
+-- StarterGui.voltage loading screen.MainFrame.Bar.Bar2
+G2L["14"] = Instance.new("Frame", G2L["13"]);
+G2L["14"]["BorderSizePixel"] = 0;
+G2L["14"]["BackgroundColor3"] = Color3.fromRGB(55, 8, 84);
+G2L["14"]["Size"] = UDim2.new(0, 0, 1, 0);
+G2L["14"]["BorderColor3"] = Color3.fromRGB(28, 43, 54);
+G2L["14"]["Name"] = [[Bar2]];
+
+
+-- StarterGui.voltage loading screen.MainFrame.Bar.Bar2.UICorner
+G2L["15"] = Instance.new("UICorner", G2L["14"]);
+G2L["15"]["CornerRadius"] = UDim.new(0.5, 0);
+
+
+-- StarterGui.voltage loading screen.MainFrame.Bar.UICorner
+G2L["16"] = Instance.new("UICorner", G2L["13"]);
+G2L["16"]["CornerRadius"] = UDim.new(0.5, 0);
+
+
+-- StarterGui.voltage loading screen.MainFrame.Bar.Percentage
+G2L["17"] = Instance.new("TextLabel", G2L["13"]);
+G2L["17"]["TextWrapped"] = true;
+G2L["17"]["TextStrokeTransparency"] = 0;
+G2L["17"]["TextSize"] = 14;
+G2L["17"]["TextStrokeColor3"] = Color3.fromRGB(55, 8, 84);
+G2L["17"]["TextScaled"] = true;
+G2L["17"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["17"]["FontFace"] = Font.new([[rbxasset://fonts/families/FredokaOne.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["17"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["17"]["BackgroundTransparency"] = 1;
+G2L["17"]["Size"] = UDim2.new(0.43837, 0, 0.78788, 0);
+G2L["17"]["BorderColor3"] = Color3.fromRGB(28, 43, 54);
+G2L["17"]["Text"] = [[0%]];
+G2L["17"]["Name"] = [[Percentage]];
+G2L["17"]["Position"] = UDim2.new(0.28082, 0, 0.09091, 0);
+
+
+-- StarterGui.voltage loading screen.MainFrame.Bar.Percentage.Percentage
+G2L["18"] = Instance.new("LocalScript", G2L["17"]);
+G2L["18"]["Name"] = [[Percentage]];
+
+
+-- StarterGui.voltage loading screen.MainFrame.Bar.bar between loading voltage
+G2L["19"] = Instance.new("Frame", G2L["13"]);
+G2L["19"]["BorderSizePixel"] = 0;
+G2L["19"]["BackgroundColor3"] = Color3.fromRGB(55, 8, 84);
+G2L["19"]["Size"] = UDim2.new(-0.80629, 0, 0.25187, 0);
+G2L["19"]["Position"] = UDim2.new(0.90266, 0, -11.733, 0);
+G2L["19"]["BorderColor3"] = Color3.fromRGB(28, 43, 54);
+G2L["19"]["Name"] = [[bar between loading voltage]];
+
+
+-- StarterGui.voltage loading screen.MainFrame.Bar.bar between loading voltage.UICorner
+G2L["1a"] = Instance.new("UICorner", G2L["19"]);
+G2L["1a"]["CornerRadius"] = UDim.new(1, 0);
+
+
+-- StarterGui.voltage loading screen.MainFrame.Bar.bar between loading voltage.UIGradient
+G2L["1b"] = Instance.new("UIGradient", G2L["19"]);
+G2L["1b"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(202, 7, 255)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(0, 0, 0))};
+
+
+-- StarterGui.voltage loading screen.MainFrame.Tip
+G2L["1c"] = Instance.new("TextLabel", G2L["2"]);
+G2L["1c"]["TextWrapped"] = true;
+G2L["1c"]["TextStrokeTransparency"] = 0;
+G2L["1c"]["TextSize"] = 14;
+G2L["1c"]["TextStrokeColor3"] = Color3.fromRGB(55, 8, 84);
+G2L["1c"]["TextScaled"] = true;
+G2L["1c"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["1c"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Italic);
+G2L["1c"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["1c"]["BackgroundTransparency"] = 1;
+G2L["1c"]["Size"] = UDim2.new(0.43837, 0, 0.02993, 0);
+G2L["1c"]["BorderColor3"] = Color3.fromRGB(28, 43, 54);
+G2L["1c"]["Text"] = [[Tip:]];
+G2L["1c"]["Name"] = [[Tip]];
+G2L["1c"]["Position"] = UDim2.new(0.28082, 0, 0.71729, 0);
+
+
+-- StarterGui.voltage loading screen.MainFrame.Tip.Tips
+G2L["1d"] = Instance.new("LocalScript", G2L["1c"]);
+G2L["1d"]["Name"] = [[Tips]];
+
+
+-- StarterGui.voltage loading screen.MainFrame.UIGradient
+G2L["1e"] = Instance.new("UIGradient", G2L["2"]);
+G2L["1e"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(0, 0, 0)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(202, 7, 255))};
+
+
+-- StarterGui.voltage loading screen.MainFrame.Loading
+G2L["1f"] = Instance.new("TextLabel", G2L["2"]);
+G2L["1f"]["TextWrapped"] = true;
+G2L["1f"]["TextStrokeTransparency"] = 0;
+G2L["1f"]["TextSize"] = 14;
+G2L["1f"]["TextStrokeColor3"] = Color3.fromRGB(55, 8, 84);
+G2L["1f"]["TextScaled"] = true;
+G2L["1f"]["BackgroundColor3"] = Color3.fromRGB(55, 8, 84);
+G2L["1f"]["FontFace"] = Font.new([[rbxasset://fonts/families/FredokaOne.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["1f"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["1f"]["BackgroundTransparency"] = 1;
+G2L["1f"]["Size"] = UDim2.new(0.63253, 0, 0.16535, 0);
+G2L["1f"]["BorderColor3"] = Color3.fromRGB(28, 43, 54);
+G2L["1f"]["Text"] = [[Loading!]];
+G2L["1f"]["Name"] = [[Loading]];
+G2L["1f"]["Position"] = UDim2.new(0.19036, 0, 0.50169, 0);
+
+
+-- StarterGui.voltage loading screen.MainFrame.welcomer
+G2L["20"] = Instance.new("TextLabel", G2L["2"]);
+G2L["20"]["TextWrapped"] = true;
+G2L["20"]["TextStrokeTransparency"] = 0;
+G2L["20"]["TextSize"] = 14;
+G2L["20"]["TextStrokeColor3"] = Color3.fromRGB(55, 8, 84);
+G2L["20"]["TextScaled"] = true;
+G2L["20"]["BackgroundColor3"] = Color3.fromRGB(55, 8, 84);
+G2L["20"]["FontFace"] = Font.new([[rbxasset://fonts/families/FredokaOne.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["20"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["20"]["BackgroundTransparency"] = 1;
+G2L["20"]["Size"] = UDim2.new(0.63253, 0, 0.16535, 0);
+G2L["20"]["BorderColor3"] = Color3.fromRGB(28, 43, 54);
+G2L["20"]["Text"] = [[Welcome!]];
+G2L["20"]["Name"] = [[welcomer]];
+G2L["20"]["Position"] = UDim2.new(0.16873, 0, 0.03422, 0);
+
+
+-- StarterGui.voltage loading screen.MainFrame.welcomer.LocalScript
+G2L["21"] = Instance.new("LocalScript", G2L["20"]);
 
 
 
--- StarterGui.voltage loading screen.Frame.loader.LocalScript
-local function C_6()
-local script = G2L["6"];
-	local button = script.Parent
-	local currentFrame = button.Parent
+-- StarterGui.voltage loading screen.MainFrame.welcomer.ImageLabel
+G2L["22"] = Instance.new("ImageLabel", G2L["20"]);
+G2L["22"]["BorderSizePixel"] = 0;
+G2L["22"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["22"]["Image"] = [[rbxasset://textures/ui/GuiImagePlaceholder.png]];
+G2L["22"]["Size"] = UDim2.new(0, 100, 0, 100);
+G2L["22"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["22"]["Position"] = UDim2.new(0.47286, 0, 0.99827, 0);
+
+
+-- StarterGui.voltage loading screen.MainFrame.welcomer.ImageLabel.LocalScript
+G2L["23"] = Instance.new("LocalScript", G2L["22"]);
+
+
+
+-- StarterGui.voltage loading screen.MainFrame.Title
+G2L["24"] = Instance.new("TextLabel", G2L["2"]);
+G2L["24"]["TextWrapped"] = true;
+G2L["24"]["TextStrokeTransparency"] = 0;
+G2L["24"]["TextSize"] = 14;
+G2L["24"]["TextStrokeColor3"] = Color3.fromRGB(55, 8, 84);
+G2L["24"]["TextScaled"] = true;
+G2L["24"]["BackgroundColor3"] = Color3.fromRGB(55, 8, 84);
+G2L["24"]["FontFace"] = Font.new([[rbxasset://fonts/families/FredokaOne.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["24"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["24"]["BackgroundTransparency"] = 1;
+G2L["24"]["Size"] = UDim2.new(0.63253, 0, 0.16535, 0);
+G2L["24"]["BorderColor3"] = Color3.fromRGB(28, 43, 54);
+G2L["24"]["Text"] = [[Is]];
+G2L["24"]["Name"] = [[Title]];
+G2L["24"]["Position"] = UDim2.new(0.18315, 0, 0.41615, 0);
+
+
+-- StarterGui.voltage loading screen.EndSequence
+G2L["25"] = Instance.new("Frame", G2L["1"]);
+G2L["25"]["Visible"] = false;
+G2L["25"]["BorderSizePixel"] = 0;
+G2L["25"]["BackgroundColor3"] = Color3.fromRGB(21, 21, 21);
+G2L["25"]["Size"] = UDim2.new(1, 0, 1, 0);
+G2L["25"]["Position"] = UDim2.new(1, 0, 0, 0);
+G2L["25"]["BorderColor3"] = Color3.fromRGB(28, 43, 54);
+G2L["25"]["Name"] = [[EndSequence]];
+
+
+-- StarterGui.voltage loading screen.EndSequence.UIGradient
+G2L["26"] = Instance.new("UIGradient", G2L["25"]);
+G2L["26"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(0, 0, 0)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(202, 7, 255))};
+
+
+-- StarterGui.voltage loading screen.DefaultUI
+G2L["27"] = Instance.new("LocalScript", G2L["1"]);
+G2L["27"]["Name"] = [[DefaultUI]];
+
+
+-- StarterGui.voltage loading screen.MainFrame.Dots.Dots
+local function C_11()
+local script = G2L["11"];
+	while true do
+		wait(0.25)
+		script.Parent.Dot1.InsideDot:TweenSize(UDim2.new(1,0,1,0), "In", "Sine", 0.25, true)
+		wait(0.25)
+		script.Parent.Dot2.InsideDot:TweenSize(UDim2.new(1,0,1,0), "In", "Sine", 0.25, true)
+		wait(0.25)
+		script.Parent.Dot3.InsideDot:TweenSize(UDim2.new(1,0,1,0), "In", "Sine", 0.25, true)
+		wait(0.25)
+		script.Parent.Dot1.InsideDot:TweenSize(UDim2.new(0,0,0,0), "In", "Sine", 0.25, true)
+		wait(0.25)
+		script.Parent.Dot2.InsideDot:TweenSize(UDim2.new(0,0,0,0), "In", "Sine", 0.25, true)
+		wait(0.25)
+		script.Parent.Dot3.InsideDot:TweenSize(UDim2.new(0,0,0,0), "In", "Sine", 0.25, true)
+	end
+end;
+task.spawn(C_11);
+-- StarterGui.voltage loading screen.MainFrame.Manager
+local function C_12()
+local script = G2L["12"];
+	local bar = script.Parent.Bar
+	local insidebar = bar.Bar2
+	local percentage = bar.Percentage
 	
-	local screenGui = currentFrame.Parent
-	local newFrame1 = screenGui:WaitForChild("voltage stats")
-	local newFrame2 = screenGui:WaitForChild("voltage")
+	wait(5)
+	insidebar:TweenSize(UDim2.new(1,0,1,0), "In", "Linear", 20, true)
+	wait(20)
+	script.Parent.Parent.EndSequence:TweenPosition(UDim2.new(0,0,0,0), "InOut", "Quad", 3, true)
+	wait(3)
+	script.Parent.Visible = false
+	script.Parent.Parent.EndSequence:TweenPosition(UDim2.new(-1,0,0,0), "InOut", "Quad", 3, true)
+	game.StarterGui:SetCoreGuiEnabled(Enum.CoreGuiType.Backpack, true)
+	game.StarterGui:SetCoreGuiEnabled(Enum.CoreGuiType.PlayerList, true)
+	game.StarterGui:SetCoreGuiEnabled(Enum.CoreGuiType.Chat, true)
+	game.StarterGui:SetCoreGuiEnabled(Enum.CoreGuiType.EmotesMenu, true)
+	wait(3)
+	script.Parent.Parent.Parent.Loading:Destroy()
+end;
+task.spawn(C_12);
+-- StarterGui.voltage loading screen.MainFrame.Bar.Percentage.Percentage
+local function C_18()
+local script = G2L["18"];
+	wait(5)
+	for i = 1,100 do
+		script.Parent.Text = i.."%"
+		wait(0.2)
+	end
+end;
+task.spawn(C_18);
+-- StarterGui.voltage loading screen.MainFrame.Tip.Tips
+local function C_1d()
+local script = G2L["1d"];
+	local tip = script.Parent
 	
-	button.MouseButton1Click:Connect(function()
-		-- Close current UI
-		button.Visible = false
-		currentFrame.Visible = false
+	while true do
+		wait(5)
+		tip.Text = "Credits To H4yden for help with the loading screen."
+		wait(5)
+		tip.Text = "Voltage Is A Private BS2 Script."
+		wait(5)
+		tip.Text = "Contact @Aiuqv For Any Problems With The Script!"
+		wait(5)
+		tip.Text = "Credits To Jumpy For Help With Some Scripts!"
+	end
+end;
+task.spawn(C_1d);
+-- StarterGui.voltage loading screen.MainFrame.welcomer.LocalScript
+local function C_21()
+local script = G2L["21"];
+	local textLabel = script.Parent
+	local player = game:GetService("Players").LocalPlayer
 	
-		-- Open new frames
-		voltage_stats.Visible = true
-		voltage.Visible = true
-	end)
+	textLabel.Text = "Welcome, " .. player.DisplayName .. " Enjoy Voltage!"
 	
 end;
-task.spawn(C_6);
+task.spawn(C_21);
+-- StarterGui.voltage loading screen.MainFrame.welcomer.ImageLabel.LocalScript
+local function C_23()
+local script = G2L["23"];
+	local imageLabel = script.Parent
+	local player = game:GetService("Players").LocalPlayer
+	
+	imageLabel.BackgroundTransparency = 1
+	
+	-- Get player's avatar headshot
+	local userId = player.UserId
+	local thumbType = Enum.ThumbnailType.HeadShot
+	local thumbSize = Enum.ThumbnailSize.Size420x420
+	
+	local content = game:GetService("Players"):GetUserThumbnailAsync(
+		userId,
+		thumbType,
+		thumbSize
+	)
+	
+	imageLabel.Image = content
+	
+end;
+task.spawn(C_23);
+-- StarterGui.voltage loading screen.DefaultUI
+local function C_27()
+local script = G2L["27"];
+	game.StarterGui:SetCoreGuiEnabled(Enum.CoreGuiType.Backpack, false)
+	game.StarterGui:SetCoreGuiEnabled(Enum.CoreGuiType.PlayerList, false)
+	game.StarterGui:SetCoreGuiEnabled(Enum.CoreGuiType.Chat, false)
+	game.StarterGui:SetCoreGuiEnabled(Enum.CoreGuiType.EmotesMenu, false)
+end;
+task.spawn(C_27);
 
 return G2L["1"], require;
