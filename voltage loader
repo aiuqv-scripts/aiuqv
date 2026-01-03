@@ -1,0 +1,88 @@
+--[=[
+ d888b  db    db d888888b      .d888b.      db      db    db  .d8b.  
+88' Y8b 88    88   `88'        VP  `8D      88      88    88 d8' `8b 
+88      88    88    88            odD'      88      88    88 88ooo88 
+88  ooo 88    88    88          .88'        88      88    88 88~~~88 
+88. ~8~ 88b  d88   .88.        j88.         88booo. 88b  d88 88   88    @uniquadev
+ Y888P  ~Y8888P' Y888888P      888888D      Y88888P ~Y8888P' YP   YP  CONVERTER 
+]=]
+
+-- Instances: 6 | Scripts: 1 | Modules: 0 | Tags: 0
+local G2L = {};
+
+-- StarterGui.voltage loading screen
+G2L["1"] = Instance.new("ScreenGui", game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui"));
+G2L["1"]["Name"] = [[voltage loading screen]];
+G2L["1"]["ZIndexBehavior"] = Enum.ZIndexBehavior.Sibling;
+
+
+-- StarterGui.voltage loading screen.Frame
+G2L["2"] = Instance.new("Frame", G2L["1"]);
+G2L["2"]["Visible"] = false;
+G2L["2"]["BorderSizePixel"] = 0;
+G2L["2"]["BackgroundColor3"] = Color3.fromRGB(47, 0, 67);
+G2L["2"]["Size"] = UDim2.new(0, 3362, 0, 1621);
+G2L["2"]["Position"] = UDim2.new(-0.37544, 0, -0.28675, 0);
+G2L["2"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["2"]["BackgroundTransparency"] = 0.4;
+
+
+-- StarterGui.voltage loading screen.Frame.loader
+G2L["3"] = Instance.new("TextButton", G2L["2"]);
+G2L["3"]["TextWrapped"] = true;
+G2L["3"]["TextStrokeTransparency"] = 0;
+G2L["3"]["BorderSizePixel"] = 0;
+G2L["3"]["TextStrokeColor3"] = Color3.fromRGB(175, 0, 244);
+G2L["3"]["TextSize"] = 14;
+G2L["3"]["TextScaled"] = true;
+G2L["3"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["3"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["3"]["FontFace"] = Font.new([[rbxasset://fonts/families/Zekton.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["3"]["Size"] = UDim2.new(0, 364, 0, 337);
+G2L["3"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["3"]["Text"] = [[Load Voltage]];
+G2L["3"]["Name"] = [[loader]];
+G2L["3"]["Position"] = UDim2.new(0.24003, 0, 0.29843, 0);
+
+
+-- StarterGui.voltage loading screen.Frame.loader.UICorner
+G2L["4"] = Instance.new("UICorner", G2L["3"]);
+G2L["4"]["CornerRadius"] = UDim.new(1, 0);
+
+
+-- StarterGui.voltage loading screen.Frame.loader.UIStroke
+G2L["5"] = Instance.new("UIStroke", G2L["3"]);
+G2L["5"]["Thickness"] = 5;
+G2L["5"]["Color"] = Color3.fromRGB(175, 0, 244);
+G2L["5"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
+
+
+-- StarterGui.voltage loading screen.Frame.loader.LocalScript
+G2L["6"] = Instance.new("LocalScript", G2L["3"]);
+
+
+
+-- StarterGui.voltage loading screen.Frame.loader.LocalScript
+local function C_6()
+local script = G2L["6"];
+	local button = script.Parent
+	local currentFrame = button.Parent
+	
+	local screenGui = currentFrame.Parent
+	local newFrame1 = screenGui:WaitForChild("voltage stats")
+	local newFrame2 = screenGui:WaitForChild("voltage")
+	
+	button.MouseButton1Click:Connect(function()
+		-- Close current UI
+		button.Visible = false
+		currentFrame.Visible = false
+	
+		-- Open new frames
+		voltage_stats.Visible = true
+		voltage.Visible = true
+	end)
+	
+end;
+task.spawn(C_6);
+
+return G2L["1"], require;
