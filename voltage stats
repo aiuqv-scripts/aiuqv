@@ -1,0 +1,371 @@
+--[=[
+ d888b  db    db d888888b      .d888b.      db      db    db  .d8b.  
+88' Y8b 88    88   `88'        VP  `8D      88      88    88 d8' `8b 
+88      88    88    88            odD'      88      88    88 88ooo88 
+88  ooo 88    88    88          .88'        88      88    88 88~~~88 
+88. ~8~ 88b  d88   .88.        j88.         88booo. 88b  d88 88   88    @uniquadev
+ Y888P  ~Y8888P' Y888888P      888888D      Y88888P ~Y8888P' YP   YP  CONVERTER 
+]=]
+
+-- Instances: 21 | Scripts: 7 | Modules: 0 | Tags: 0
+local G2L = {};
+
+-- StarterGui.new stats gui
+G2L["1"] = Instance.new("ScreenGui", game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui"));
+G2L["1"]["Name"] = [[new stats gui]];
+G2L["1"]["ZIndexBehavior"] = Enum.ZIndexBehavior.Sibling;
+
+
+-- StarterGui.new stats gui.Frame
+G2L["2"] = Instance.new("Frame", G2L["1"]);
+G2L["2"]["Visible"] = false;
+G2L["2"]["BorderSizePixel"] = 0;
+G2L["2"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["2"]["Size"] = UDim2.new(0, 100, 0, 100);
+G2L["2"]["Position"] = UDim2.new(0.03266, 0, 0.47737, 0);
+G2L["2"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+
+
+-- StarterGui.new stats gui.Frame.drag
+G2L["3"] = Instance.new("LocalScript", G2L["2"]);
+G2L["3"]["Name"] = [[drag]];
+
+
+-- StarterGui.new stats gui.Frame.Sps
+G2L["4"] = Instance.new("TextLabel", G2L["2"]);
+G2L["4"]["TextWrapped"] = true;
+G2L["4"]["BorderSizePixel"] = 0;
+G2L["4"]["TextSize"] = 70;
+G2L["4"]["BackgroundColor3"] = Color3.fromRGB(19, 4, 240);
+G2L["4"]["FontFace"] = Font.new([[rbxasset://fonts/families/Creepster.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["4"]["TextColor3"] = Color3.fromRGB(225, 59, 240);
+G2L["4"]["Size"] = UDim2.new(0, 274, 0, 152);
+G2L["4"]["BorderColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["4"]["Text"] = [[Sps]];
+G2L["4"]["Name"] = [[Sps]];
+G2L["4"]["Position"] = UDim2.new(-0.39004, 0, -0.18, 0);
+
+
+-- StarterGui.new stats gui.Frame.Sps.LocalScript
+G2L["5"] = Instance.new("LocalScript", G2L["4"]);
+
+
+
+-- StarterGui.new stats gui.Frame.Sps.UICorner
+G2L["6"] = Instance.new("UICorner", G2L["4"]);
+G2L["6"]["CornerRadius"] = UDim.new(0, 38);
+
+
+-- StarterGui.new stats gui.Frame.Sps.TextLabel
+G2L["7"] = Instance.new("TextLabel", G2L["4"]);
+G2L["7"]["BorderSizePixel"] = 0;
+G2L["7"]["TextSize"] = 50;
+G2L["7"]["BackgroundColor3"] = Color3.fromRGB(19, 4, 240);
+G2L["7"]["FontFace"] = Font.new([[rbxasset://fonts/families/Creepster.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["7"]["TextColor3"] = Color3.fromRGB(225, 59, 240);
+G2L["7"]["Size"] = UDim2.new(0, 200, 0, 50);
+G2L["7"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["7"]["Text"] = [[gui]];
+G2L["7"]["Position"] = UDim2.new(0.16058, 0, 0, 0);
+
+
+-- StarterGui.new stats gui.Frame.Open/Close1
+G2L["8"] = Instance.new("TextButton", G2L["2"]);
+G2L["8"]["BorderSizePixel"] = 0;
+G2L["8"]["TextSize"] = 20;
+G2L["8"]["TextColor3"] = Color3.fromRGB(225, 59, 240);
+G2L["8"]["BackgroundColor3"] = Color3.fromRGB(19, 4, 240);
+G2L["8"]["FontFace"] = Font.new([[rbxasset://fonts/families/Creepster.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["8"]["Size"] = UDim2.new(0, 20, 0, 25);
+G2L["8"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["8"]["Text"] = [[X]];
+G2L["8"]["Name"] = [[Open/Close1]];
+G2L["8"]["Position"] = UDim2.new(-0.24449, 0, -0.05, 0);
+
+
+-- StarterGui.new stats gui.Frame.Open/Close1.LocalScript
+G2L["9"] = Instance.new("LocalScript", G2L["8"]);
+
+
+
+-- StarterGui.new stats gui.Frame.Open/Close1.UICorner
+G2L["a"] = Instance.new("UICorner", G2L["8"]);
+G2L["a"]["CornerRadius"] = UDim.new(9, 9);
+
+
+-- StarterGui.new stats gui.Frame.Weight Count
+G2L["b"] = Instance.new("TextLabel", G2L["2"]);
+G2L["b"]["TextWrapped"] = true;
+G2L["b"]["BorderSizePixel"] = 0;
+G2L["b"]["TextSize"] = 20;
+G2L["b"]["TextScaled"] = true;
+G2L["b"]["BackgroundColor3"] = Color3.fromRGB(19, 4, 240);
+G2L["b"]["FontFace"] = Font.new([[rbxasset://fonts/families/Creepster.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["b"]["TextColor3"] = Color3.fromRGB(225, 59, 240);
+G2L["b"]["Size"] = UDim2.new(0, 247, 0, 35);
+G2L["b"]["BorderColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["b"]["Text"] = [[Weights]];
+G2L["b"]["Name"] = [[Weight Count]];
+G2L["b"]["Position"] = UDim2.new(-0.24889, 0, 0.99336, 0);
+
+
+-- StarterGui.new stats gui.Frame.Weight Count.LocalScript
+G2L["c"] = Instance.new("LocalScript", G2L["b"]);
+
+
+
+-- StarterGui.new stats gui.Frame.Weight Count.UICorner
+G2L["d"] = Instance.new("UICorner", G2L["b"]);
+G2L["d"]["CornerRadius"] = UDim.new(0, 70);
+
+
+-- StarterGui.new stats gui.Frame.Ping
+G2L["e"] = Instance.new("TextLabel", G2L["2"]);
+G2L["e"]["TextWrapped"] = true;
+G2L["e"]["BorderSizePixel"] = 0;
+G2L["e"]["TextSize"] = 20;
+G2L["e"]["TextScaled"] = true;
+G2L["e"]["BackgroundColor3"] = Color3.fromRGB(19, 4, 240);
+G2L["e"]["FontFace"] = Font.new([[rbxasset://fonts/families/Creepster.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["e"]["TextColor3"] = Color3.fromRGB(225, 59, 240);
+G2L["e"]["Size"] = UDim2.new(0, 57, 0, 42);
+G2L["e"]["BorderColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["e"]["Text"] = [[Ping]];
+G2L["e"]["Name"] = [[Ping]];
+G2L["e"]["Position"] = UDim2.new(1.64796, 0, 0.36221, 0);
+
+
+-- StarterGui.new stats gui.Frame.Ping.LocalScript
+G2L["f"] = Instance.new("LocalScript", G2L["e"]);
+
+
+
+-- StarterGui.new stats gui.Frame.Timer
+G2L["10"] = Instance.new("TextLabel", G2L["2"]);
+G2L["10"]["TextWrapped"] = true;
+G2L["10"]["BorderSizePixel"] = 0;
+G2L["10"]["TextSize"] = 35;
+G2L["10"]["BackgroundColor3"] = Color3.fromRGB(19, 4, 240);
+G2L["10"]["FontFace"] = Font.new([[rbxasset://fonts/families/Creepster.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["10"]["TextColor3"] = Color3.fromRGB(225, 59, 240);
+G2L["10"]["BackgroundTransparency"] = 10;
+G2L["10"]["Size"] = UDim2.new(0, 144, 0, 42);
+G2L["10"]["BorderColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["10"]["Text"] = [[Time]];
+G2L["10"]["Name"] = [[Timer]];
+G2L["10"]["Position"] = UDim2.new(0.27353, 0, -0.59, 0);
+
+
+-- StarterGui.new stats gui.Frame.Timer.LocalScript
+G2L["11"] = Instance.new("LocalScript", G2L["10"]);
+
+
+
+-- StarterGui.new stats gui.Frame.Timer.UICorner
+G2L["12"] = Instance.new("UICorner", G2L["10"]);
+G2L["12"]["CornerRadius"] = UDim.new(1, 0);
+
+
+-- StarterGui.new stats gui.Frame.Gain
+G2L["13"] = Instance.new("TextLabel", G2L["2"]);
+G2L["13"]["TextWrapped"] = true;
+G2L["13"]["BorderSizePixel"] = 0;
+G2L["13"]["TextSize"] = 20;
+G2L["13"]["TextScaled"] = true;
+G2L["13"]["BackgroundColor3"] = Color3.fromRGB(19, 4, 240);
+G2L["13"]["FontFace"] = Font.new([[rbxasset://fonts/families/Creepster.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["13"]["TextColor3"] = Color3.fromRGB(225, 59, 240);
+G2L["13"]["Size"] = UDim2.new(0, 82, 0, 35);
+G2L["13"]["BorderColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["13"]["Text"] = [[Gain]];
+G2L["13"]["Name"] = [[Gain]];
+G2L["13"]["Position"] = UDim2.new(-0.30889, 0, 0.40336, 0);
+
+
+-- StarterGui.new stats gui.Frame.Gain.LocalScript
+G2L["14"] = Instance.new("LocalScript", G2L["13"]);
+
+
+
+-- StarterGui.new stats gui.Frame.Gain.UICorner
+G2L["15"] = Instance.new("UICorner", G2L["13"]);
+G2L["15"]["CornerRadius"] = UDim.new(0, 70);
+
+
+-- StarterGui.new stats gui.Frame.drag
+local function C_3()
+local script = G2L["3"];
+	local UIS = game:GetService("UserInputService")
+	local frame = script.Parent
+	
+	local dragToggle = nil
+	local dragSpeed = 0.1
+	local dragStart = nil
+	local startPos = nil
+	
+	local function updateInput(input)
+		local delta = input.Position - dragStart
+		local position = UDim2.new(startPos.X.Scale,startPos.X.Offset + delta.X, startPos.Y.Scale, startPos.Y.Offset + delta.Y)
+		game:GetService("TweenService"):Create(frame, TweenInfo.new(dragSpeed), {Position = position}):Play()
+	end
+	
+	frame.InputBegan:Connect(function(input)
+		if (input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch) then
+			dragToggle = true
+			dragStart = input.Position
+			startPos = frame.Position
+			input.Changed:Connect(function()
+				if input.UserInputState == Enum.UserInputState.End then
+					dragToggle = false
+				end
+			end)
+		end
+	end)
+	
+	UIS.InputChanged:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+			if dragToggle then
+				updateInput(input)
+			end
+		end
+	end)
+end;
+task.spawn(C_3);
+-- StarterGui.new stats gui.Frame.Sps.LocalScript
+local function C_5()
+local script = G2L["5"];
+	local label = script.Parent  -- The TextLabel
+	local player = game.Players.LocalPlayer
+	local leaderstats = player:WaitForChild("leaderstats")  -- Wait for leaderstats
+	local strengthStat = leaderstats:WaitForChild("Strength")  -- Get Strength stat
+	
+	local previousStrength = strengthStat.Value  -- Initial Strength
+	local sps = 0  -- Strength Per Second
+	
+	while true do
+		local startStrength = strengthStat.Value  -- Get current Strength
+		wait(1)  -- Wait for 1 second
+		local endStrength = strengthStat.Value  -- Get updated Strength
+	
+		sps = endStrength - startStrength  -- Calculate SPS
+		label.Text = " " .. sps  -- Update the TextLabel
+	end
+	
+end;
+task.spawn(C_5);
+-- StarterGui.new stats gui.Frame.Open/Close1.LocalScript
+local function C_9()
+local script = G2L["9"];
+	local button = script.Parent -- Get the button
+	local gui = button.Parent -- Get the GUI that contains the button
+	local clickCount = 0 -- Click counter
+	
+	button.MouseButton1Click:Connect(function()
+		clickCount = clickCount + 1 -- Increase click count
+	
+		if clickCount == 2 then
+			gui:Destroy() -- Delete the GUI after two clicks
+		end
+	end)
+	
+end;
+task.spawn(C_9);
+-- StarterGui.new stats gui.Frame.Weight Count.LocalScript
+local function C_c()
+local script = G2L["c"];
+	local textLabel = script.Parent -- The TextLabel where the tool count will be displayed
+	local player = game.Players.LocalPlayer
+	local backpack = player:FindFirstChild("Backpack")
+	
+	local function updateToolCount()
+		if backpack then
+			textLabel.Text = " " .. #backpack:GetChildren()
+		end
+	end
+	
+	-- Update when a tool is added or removed
+	backpack.ChildAdded:Connect(updateToolCount)
+	backpack.ChildRemoved:Connect(updateToolCount)
+	
+	-- Initial update
+	updateToolCount()
+	
+end;
+task.spawn(C_c);
+-- StarterGui.new stats gui.Frame.Ping.LocalScript
+local function C_f()
+local script = G2L["f"];
+	local textLabel = script.Parent -- Assuming this script is inside the TextLabel
+	
+	local RunService = game:GetService("RunService")
+	
+	local function updatePing()
+		while true do
+			local ping = math.floor(game:GetService("Stats").Network.ServerStatsItem["Data Ping"]:GetValue()) -- Get ping
+			textLabel.Text = " " .. ping .. " ms"
+			wait(1) -- Update every second
+		end
+	end
+	
+	task.spawn(updatePing) -- Start updating
+	
+end;
+task.spawn(C_f);
+-- StarterGui.new stats gui.Frame.Timer.LocalScript
+local function C_11()
+local script = G2L["11"];
+	local player = game.Players.LocalPlayer
+	local startTime = os.time() -- Store the time when the player joins
+	local textLabel = script.Parent -- Make sure the TextLabel is a child of this script
+	
+	local function updateTime()
+		while task.wait(1) do
+			local elapsedTime = os.time() - startTime
+			local hours = math.floor(elapsedTime / 3600)
+			local minutes = math.floor((elapsedTime % 3600) / 60)
+			local seconds = elapsedTime % 60
+	
+			-- Format the time (HH:MM:SS)
+			textLabel.Text = string.format(": %02d:%02d:%02d", hours, minutes, seconds)
+		end
+	end
+	
+	-- Run the update loop
+	task.spawn(updateTime)
+	
+end;
+task.spawn(C_11);
+-- StarterGui.new stats gui.Frame.Gain.LocalScript
+local function C_14()
+local script = G2L["14"];
+	local textLabel = script.Parent -- The TextLabel where Strength gained will be displayed
+	local player = game.Players.LocalPlayer
+	local strengthStat = player:FindFirstChild("leaderstats") and player.leaderstats:FindFirstChild("Strength")
+	
+	if not strengthStat then
+		warn("Strength stat not found in leaderstats!")
+		return
+	end
+	
+	local lastStrength = strengthStat.Value
+	local totalStrengthGained = 0
+	
+	local function updateStrengthGained()
+		local currentStrength = strengthStat.Value
+		local strengthDifference = currentStrength - lastStrength
+		totalStrengthGained = totalStrengthGained + strengthDifference
+		lastStrength = currentStrength -- Update the last recorded strength
+	
+		textLabel.Text = " " .. totalStrengthGained
+	end
+	
+	-- Update every second
+	while true do
+		updateStrengthGained()
+		wait(1)
+	end
+	
+end;
+task.spawn(C_14);
+
+return G2L["1"], require;
