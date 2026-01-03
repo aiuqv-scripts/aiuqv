@@ -1,0 +1,2006 @@
+--[=[
+ d888b  db    db d888888b      .d888b.      db      db    db  .d8b.  
+88' Y8b 88    88   `88'        VP  `8D      88      88    88 d8' `8b 
+88      88    88    88            odD'      88      88    88 88ooo88 
+88  ooo 88    88    88          .88'        88      88    88 88~~~88 
+88. ~8~ 88b  d88   .88.        j88.         88booo. 88b  d88 88   88    @uniquadev
+ Y888P  ~Y8888P' Y888888P      888888D      Y88888P ~Y8888P' YP   YP  CONVERTER 
+]=]
+
+-- Instances: 129 | Scripts: 30 | Modules: 0 | Tags: 0
+local G2L = {};
+
+-- StarterGui.voltage
+G2L["1"] = Instance.new("ScreenGui", game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui"));
+G2L["1"]["Name"] = [[voltage]];
+G2L["1"]["ZIndexBehavior"] = Enum.ZIndexBehavior.Sibling;
+
+
+-- StarterGui.voltage.LocalScript
+G2L["2"] = Instance.new("LocalScript", G2L["1"]);
+
+
+
+-- StarterGui.voltage.coolio
+G2L["3"] = Instance.new("Frame", G2L["1"]);
+G2L["3"]["BorderSizePixel"] = 0;
+G2L["3"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["3"]["Size"] = UDim2.new(0, 541, 0, 268);
+G2L["3"]["Position"] = UDim2.new(0.36648, 0, 0.40179, 0);
+G2L["3"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["3"]["Name"] = [[coolio]];
+G2L["3"]["BackgroundTransparency"] = 0.1;
+
+
+-- StarterGui.voltage.coolio.drag
+G2L["4"] = Instance.new("LocalScript", G2L["3"]);
+G2L["4"]["Name"] = [[drag]];
+
+
+-- StarterGui.voltage.coolio.UICorner
+G2L["5"] = Instance.new("UICorner", G2L["3"]);
+
+
+
+-- StarterGui.voltage.coolio.UIStroke
+G2L["6"] = Instance.new("UIStroke", G2L["3"]);
+G2L["6"]["Thickness"] = 2;
+G2L["6"]["Color"] = Color3.fromRGB(159, 21, 244);
+G2L["6"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
+
+
+-- StarterGui.voltage.coolio.TabFrame2
+G2L["7"] = Instance.new("Frame", G2L["3"]);
+G2L["7"]["Visible"] = false;
+G2L["7"]["BorderSizePixel"] = 0;
+G2L["7"]["BackgroundColor3"] = Color3.fromRGB(163, 0, 255);
+G2L["7"]["Size"] = UDim2.new(1, 0, 0.82176, 0);
+G2L["7"]["Position"] = UDim2.new(0, 0, 0.17824, 0);
+G2L["7"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["7"]["Name"] = [[TabFrame2]];
+G2L["7"]["BackgroundTransparency"] = 0.95;
+
+
+-- StarterGui.voltage.coolio.TabFrame2.UICorner
+G2L["8"] = Instance.new("UICorner", G2L["7"]);
+
+
+
+-- StarterGui.voltage.coolio.TabFrame2.Text
+G2L["9"] = Instance.new("TextLabel", G2L["7"]);
+G2L["9"]["TextWrapped"] = true;
+G2L["9"]["BorderSizePixel"] = 0;
+G2L["9"]["TextSize"] = 14;
+G2L["9"]["TextScaled"] = true;
+G2L["9"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["9"]["FontFace"] = Font.new([[rbxasset://fonts/families/IndieFlower.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["9"]["TextColor3"] = Color3.fromRGB(193, 66, 255);
+G2L["9"]["BackgroundTransparency"] = 1;
+G2L["9"]["Size"] = UDim2.new(1, 0, 0.1088, 0);
+G2L["9"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["9"]["Text"] = [[Duping]];
+G2L["9"]["Name"] = [[Text]];
+G2L["9"]["Position"] = UDim2.new(0, 0, 0.89014, 0);
+
+
+-- StarterGui.voltage.coolio.TabFrame2.800
+G2L["a"] = Instance.new("TextButton", G2L["7"]);
+G2L["a"]["TextWrapped"] = true;
+G2L["a"]["BorderSizePixel"] = 0;
+G2L["a"]["TextSize"] = 14;
+G2L["a"]["TextScaled"] = true;
+G2L["a"]["TextColor3"] = Color3.fromRGB(159, 21, 244);
+G2L["a"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["a"]["FontFace"] = Font.new([[rbxassetid://11322590111]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["a"]["Size"] = UDim2.new(0.25128, 0, 0.28241, 0);
+G2L["a"]["BorderColor3"] = Color3.fromRGB(159, 21, 244);
+G2L["a"]["Text"] = [[800]];
+G2L["a"]["Name"] = [[800]];
+G2L["a"]["Position"] = UDim2.new(0.27125, 0, 0.00658, 0);
+
+
+-- StarterGui.voltage.coolio.TabFrame2.800.LocalScript
+G2L["b"] = Instance.new("LocalScript", G2L["a"]);
+
+
+
+-- StarterGui.voltage.coolio.TabFrame2.800.UICorner
+G2L["c"] = Instance.new("UICorner", G2L["a"]);
+G2L["c"]["CornerRadius"] = UDim.new(1, 0);
+
+
+-- StarterGui.voltage.coolio.TabFrame2.800.UIStroke
+G2L["d"] = Instance.new("UIStroke", G2L["a"]);
+G2L["d"]["Color"] = Color3.fromRGB(129, 17, 255);
+G2L["d"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
+
+
+-- StarterGui.voltage.coolio.TabFrame2.100
+G2L["e"] = Instance.new("TextButton", G2L["7"]);
+G2L["e"]["TextWrapped"] = true;
+G2L["e"]["BorderSizePixel"] = 0;
+G2L["e"]["TextSize"] = 14;
+G2L["e"]["TextScaled"] = true;
+G2L["e"]["TextColor3"] = Color3.fromRGB(159, 21, 244);
+G2L["e"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["e"]["FontFace"] = Font.new([[rbxassetid://11322590111]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["e"]["Size"] = UDim2.new(0.25641, 0, 0.28241, 0);
+G2L["e"]["BorderColor3"] = Color3.fromRGB(159, 21, 244);
+G2L["e"]["Text"] = [[100]];
+G2L["e"]["Name"] = [[100]];
+G2L["e"]["Position"] = UDim2.new(0.55794, 0, 0.00658, 0);
+
+
+-- StarterGui.voltage.coolio.TabFrame2.100.LocalScript
+G2L["f"] = Instance.new("LocalScript", G2L["e"]);
+
+
+
+-- StarterGui.voltage.coolio.TabFrame2.100.UICorner
+G2L["10"] = Instance.new("UICorner", G2L["e"]);
+G2L["10"]["CornerRadius"] = UDim.new(1, 0);
+
+
+-- StarterGui.voltage.coolio.TabFrame2.100.UIStroke
+G2L["11"] = Instance.new("UIStroke", G2L["e"]);
+G2L["11"]["Color"] = Color3.fromRGB(129, 17, 255);
+G2L["11"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
+
+
+-- StarterGui.voltage.coolio.TabFrame2.dw
+G2L["12"] = Instance.new("TextLabel", G2L["7"]);
+G2L["12"]["BorderSizePixel"] = 0;
+G2L["12"]["TextSize"] = 30;
+G2L["12"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["12"]["FontFace"] = Font.new([[rbxasset://fonts/families/Zekton.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["12"]["TextColor3"] = Color3.fromRGB(159, 21, 244);
+G2L["12"]["Size"] = UDim2.new(0, 171, 0, 48);
+G2L["12"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["12"]["Text"] = [[dw]];
+G2L["12"]["Name"] = [[dw]];
+G2L["12"]["Position"] = UDim2.new(0.36588, 0, 0.35409, 0);
+
+
+-- StarterGui.voltage.coolio.TabFrame2.dw.LocalScript
+G2L["13"] = Instance.new("LocalScript", G2L["12"]);
+
+
+
+-- StarterGui.voltage.coolio.TabFrame2.dw.UICorner
+G2L["14"] = Instance.new("UICorner", G2L["12"]);
+G2L["14"]["CornerRadius"] = UDim.new(1, 0);
+
+
+-- StarterGui.voltage.coolio.TabFrame2.dw.UIStroke
+G2L["15"] = Instance.new("UIStroke", G2L["12"]);
+G2L["15"]["Color"] = Color3.fromRGB(159, 21, 244);
+G2L["15"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
+
+
+-- StarterGui.voltage.coolio.TabBtn2
+G2L["16"] = Instance.new("TextButton", G2L["3"]);
+G2L["16"]["TextWrapped"] = true;
+G2L["16"]["BorderSizePixel"] = 0;
+G2L["16"]["TextSize"] = 40;
+G2L["16"]["TextScaled"] = true;
+G2L["16"]["TextColor3"] = Color3.fromRGB(159, 21, 244);
+G2L["16"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["16"]["FontFace"] = Font.new([[rbxasset://fonts/families/Zekton.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["16"]["Size"] = UDim2.new(0.18077, 0, 0.06944, 0);
+G2L["16"]["BorderColor3"] = Color3.fromRGB(159, 21, 244);
+G2L["16"]["Text"] = [[Duping]];
+G2L["16"]["Name"] = [[TabBtn2]];
+G2L["16"]["Position"] = UDim2.new(0.01482, 0, 0.26344, 0);
+
+
+-- StarterGui.voltage.coolio.TabBtn2.LocalScript
+G2L["17"] = Instance.new("LocalScript", G2L["16"]);
+
+
+
+-- StarterGui.voltage.coolio.TabBtn2.UICorner
+G2L["18"] = Instance.new("UICorner", G2L["16"]);
+
+
+
+-- StarterGui.voltage.coolio.TabBtn2.UIStroke
+G2L["19"] = Instance.new("UIStroke", G2L["16"]);
+G2L["19"]["Color"] = Color3.fromRGB(129, 17, 255);
+G2L["19"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
+
+
+-- StarterGui.voltage.coolio.TitleText
+G2L["1a"] = Instance.new("TextLabel", G2L["3"]);
+G2L["1a"]["TextWrapped"] = true;
+G2L["1a"]["BorderSizePixel"] = 0;
+G2L["1a"]["TextSize"] = 14;
+G2L["1a"]["TextScaled"] = true;
+G2L["1a"]["BackgroundColor3"] = Color3.fromRGB(163, 0, 255);
+G2L["1a"]["FontFace"] = Font.new([[rbxasset://fonts/families/Zekton.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["1a"]["TextColor3"] = Color3.fromRGB(193, 66, 255);
+G2L["1a"]["BackgroundTransparency"] = 1;
+G2L["1a"]["Size"] = UDim2.new(1, 0, 0.1088, 0);
+G2L["1a"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["1a"]["Text"] = [[Voltage]];
+G2L["1a"]["Name"] = [[TitleText]];
+
+
+-- StarterGui.voltage.coolio.TabBtn3
+G2L["1b"] = Instance.new("TextButton", G2L["3"]);
+G2L["1b"]["TextWrapped"] = true;
+G2L["1b"]["BorderSizePixel"] = 0;
+G2L["1b"]["TextSize"] = 14;
+G2L["1b"]["TextScaled"] = true;
+G2L["1b"]["TextColor3"] = Color3.fromRGB(159, 21, 244);
+G2L["1b"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["1b"]["FontFace"] = Font.new([[rbxasset://fonts/families/Zekton.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["1b"]["Size"] = UDim2.new(0.18077, 0, 0.06944, 0);
+G2L["1b"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["1b"]["Text"] = [[Misc]];
+G2L["1b"]["Name"] = [[TabBtn3]];
+G2L["1b"]["Position"] = UDim2.new(0.01482, 0, 0.66166, 0);
+
+
+-- StarterGui.voltage.coolio.TabBtn3.LocalScript
+G2L["1c"] = Instance.new("LocalScript", G2L["1b"]);
+
+
+
+-- StarterGui.voltage.coolio.TabBtn3.UICorner
+G2L["1d"] = Instance.new("UICorner", G2L["1b"]);
+
+
+
+-- StarterGui.voltage.coolio.TabBtn3.UIStroke
+G2L["1e"] = Instance.new("UIStroke", G2L["1b"]);
+G2L["1e"]["Color"] = Color3.fromRGB(159, 21, 244);
+G2L["1e"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
+
+
+-- StarterGui.voltage.coolio.TabFrame3
+G2L["1f"] = Instance.new("Frame", G2L["3"]);
+G2L["1f"]["Visible"] = false;
+G2L["1f"]["BorderSizePixel"] = 0;
+G2L["1f"]["BackgroundColor3"] = Color3.fromRGB(163, 0, 255);
+G2L["1f"]["Size"] = UDim2.new(1, 0, 0.82176, 0);
+G2L["1f"]["Position"] = UDim2.new(0, 0, 0.17824, 0);
+G2L["1f"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["1f"]["Name"] = [[TabFrame3]];
+G2L["1f"]["BackgroundTransparency"] = 0.95;
+
+
+-- StarterGui.voltage.coolio.TabFrame3.UICorner
+G2L["20"] = Instance.new("UICorner", G2L["1f"]);
+
+
+
+-- StarterGui.voltage.coolio.TabFrame3.Text
+G2L["21"] = Instance.new("TextLabel", G2L["1f"]);
+G2L["21"]["TextWrapped"] = true;
+G2L["21"]["BorderSizePixel"] = 0;
+G2L["21"]["TextSize"] = 14;
+G2L["21"]["TextScaled"] = true;
+G2L["21"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["21"]["FontFace"] = Font.new([[rbxasset://fonts/families/IndieFlower.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["21"]["TextColor3"] = Color3.fromRGB(193, 66, 255);
+G2L["21"]["BackgroundTransparency"] = 1;
+G2L["21"]["Size"] = UDim2.new(1, 0, 0.1088, 0);
+G2L["21"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["21"]["Text"] = [[Extras]];
+G2L["21"]["Name"] = [[Text]];
+G2L["21"]["Position"] = UDim2.new(-0.00128, 0, 0.89014, 0);
+
+
+-- StarterGui.voltage.coolio.TabFrame3.Rumble
+G2L["22"] = Instance.new("TextButton", G2L["1f"]);
+G2L["22"]["TextWrapped"] = true;
+G2L["22"]["BorderSizePixel"] = 0;
+G2L["22"]["TextSize"] = 14;
+G2L["22"]["TextScaled"] = true;
+G2L["22"]["TextColor3"] = Color3.fromRGB(159, 21, 244);
+G2L["22"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["22"]["FontFace"] = Font.new([[rbxasset://fonts/families/Zekton.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["22"]["Size"] = UDim2.new(0.22352, 0, 0.15314, 0);
+G2L["22"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["22"]["Text"] = [[Rumble]];
+G2L["22"]["Name"] = [[Rumble]];
+G2L["22"]["Position"] = UDim2.new(0.34014, 0, 0.01287, 0);
+
+
+-- StarterGui.voltage.coolio.TabFrame3.Rumble.LocalScript
+G2L["23"] = Instance.new("LocalScript", G2L["22"]);
+
+
+
+-- StarterGui.voltage.coolio.TabFrame3.Rumble.UICorner
+G2L["24"] = Instance.new("UICorner", G2L["22"]);
+
+
+
+-- StarterGui.voltage.coolio.TabFrame3.Rumble.UIStroke
+G2L["25"] = Instance.new("UIStroke", G2L["22"]);
+G2L["25"]["Color"] = Color3.fromRGB(159, 21, 244);
+G2L["25"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
+
+
+-- StarterGui.voltage.coolio.TabFrame3.High
+G2L["26"] = Instance.new("TextButton", G2L["1f"]);
+G2L["26"]["TextWrapped"] = true;
+G2L["26"]["BorderSizePixel"] = 0;
+G2L["26"]["TextSize"] = 14;
+G2L["26"]["TextScaled"] = true;
+G2L["26"]["TextColor3"] = Color3.fromRGB(159, 21, 244);
+G2L["26"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["26"]["FontFace"] = Font.new([[rbxasset://fonts/families/Zekton.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["26"]["Size"] = UDim2.new(0.22352, 0, 0.15314, 0);
+G2L["26"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["26"]["Text"] = [[High]];
+G2L["26"]["Name"] = [[High]];
+G2L["26"]["Position"] = UDim2.new(0.34014, 0, 0.19449, 0);
+
+
+-- StarterGui.voltage.coolio.TabFrame3.High.LocalScript
+G2L["27"] = Instance.new("LocalScript", G2L["26"]);
+
+
+
+-- StarterGui.voltage.coolio.TabFrame3.High.UICorner
+G2L["28"] = Instance.new("UICorner", G2L["26"]);
+
+
+
+-- StarterGui.voltage.coolio.TabFrame3.High.UIStroke
+G2L["29"] = Instance.new("UIStroke", G2L["26"]);
+G2L["29"]["Color"] = Color3.fromRGB(159, 21, 244);
+G2L["29"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
+
+
+-- StarterGui.voltage.coolio.TabFrame3.inf yield
+G2L["2a"] = Instance.new("TextButton", G2L["1f"]);
+G2L["2a"]["TextWrapped"] = true;
+G2L["2a"]["BorderSizePixel"] = 0;
+G2L["2a"]["TextSize"] = 14;
+G2L["2a"]["TextScaled"] = true;
+G2L["2a"]["TextColor3"] = Color3.fromRGB(159, 21, 244);
+G2L["2a"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["2a"]["FontFace"] = Font.new([[rbxasset://fonts/families/Zekton.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["2a"]["Size"] = UDim2.new(0.22352, 0, 0.15314, 0);
+G2L["2a"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["2a"]["Text"] = [[Yield]];
+G2L["2a"]["Name"] = [[inf yield]];
+G2L["2a"]["Position"] = UDim2.new(0.60816, 0, 0.01287, 0);
+
+
+-- StarterGui.voltage.coolio.TabFrame3.inf yield.LocalScript
+G2L["2b"] = Instance.new("LocalScript", G2L["2a"]);
+
+
+
+-- StarterGui.voltage.coolio.TabFrame3.inf yield.UICorner
+G2L["2c"] = Instance.new("UICorner", G2L["2a"]);
+
+
+
+-- StarterGui.voltage.coolio.TabFrame3.inf yield.UIStroke
+G2L["2d"] = Instance.new("UIStroke", G2L["2a"]);
+G2L["2d"]["Color"] = Color3.fromRGB(159, 21, 244);
+G2L["2d"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
+
+
+-- StarterGui.voltage.coolio.TabFrame3.Reviz
+G2L["2e"] = Instance.new("TextButton", G2L["1f"]);
+G2L["2e"]["TextWrapped"] = true;
+G2L["2e"]["BorderSizePixel"] = 0;
+G2L["2e"]["TextSize"] = 14;
+G2L["2e"]["TextScaled"] = true;
+G2L["2e"]["TextColor3"] = Color3.fromRGB(159, 21, 244);
+G2L["2e"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["2e"]["FontFace"] = Font.new([[rbxasset://fonts/families/Zekton.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["2e"]["Size"] = UDim2.new(0.22352, 0, 0.15314, 0);
+G2L["2e"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["2e"]["Text"] = [[Reviz]];
+G2L["2e"]["Name"] = [[Reviz]];
+G2L["2e"]["Position"] = UDim2.new(0.60816, 0, 0.19449, 0);
+
+
+-- StarterGui.voltage.coolio.TabFrame3.Reviz.LocalScript
+G2L["2f"] = Instance.new("LocalScript", G2L["2e"]);
+
+
+
+-- StarterGui.voltage.coolio.TabFrame3.Reviz.UICorner
+G2L["30"] = Instance.new("UICorner", G2L["2e"]);
+
+
+
+-- StarterGui.voltage.coolio.TabFrame3.Reviz.UIStroke
+G2L["31"] = Instance.new("UIStroke", G2L["2e"]);
+G2L["31"]["Color"] = Color3.fromRGB(159, 21, 244);
+G2L["31"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
+
+
+-- StarterGui.voltage.coolio.TabFrame3.D/N
+G2L["32"] = Instance.new("TextButton", G2L["1f"]);
+G2L["32"]["TextWrapped"] = true;
+G2L["32"]["BorderSizePixel"] = 0;
+G2L["32"]["TextSize"] = 14;
+G2L["32"]["TextScaled"] = true;
+G2L["32"]["TextColor3"] = Color3.fromRGB(159, 21, 244);
+G2L["32"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["32"]["FontFace"] = Font.new([[rbxasset://fonts/families/Zekton.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["32"]["Size"] = UDim2.new(0.22352, 0, 0.15314, 0);
+G2L["32"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["32"]["Text"] = [[D/N]];
+G2L["32"]["Name"] = [[D/N]];
+G2L["32"]["Position"] = UDim2.new(0.45844, 0, 0.42153, 0);
+
+
+-- StarterGui.voltage.coolio.TabFrame3.D/N.LocalScript
+G2L["33"] = Instance.new("LocalScript", G2L["32"]);
+
+
+
+-- StarterGui.voltage.coolio.TabFrame3.D/N.UICorner
+G2L["34"] = Instance.new("UICorner", G2L["32"]);
+
+
+
+-- StarterGui.voltage.coolio.TabFrame3.D/N.UIStroke
+G2L["35"] = Instance.new("UIStroke", G2L["32"]);
+G2L["35"]["Color"] = Color3.fromRGB(159, 21, 244);
+G2L["35"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
+
+
+-- StarterGui.voltage.coolio.ImageLabel
+G2L["36"] = Instance.new("ImageLabel", G2L["3"]);
+G2L["36"]["BorderSizePixel"] = 0;
+G2L["36"]["ScaleType"] = Enum.ScaleType.Fit;
+G2L["36"]["BackgroundColor3"] = Color3.fromRGB(163, 0, 255);
+G2L["36"]["ImageColor3"] = Color3.fromRGB(235, 0, 255);
+G2L["36"]["Image"] = [[rbxassetid://86721820108224]];
+G2L["36"]["Size"] = UDim2.new(0, 80, 0, 41);
+G2L["36"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["36"]["BackgroundTransparency"] = 1;
+G2L["36"]["Position"] = UDim2.new(0.53577, 0, -0.00746, 0);
+
+
+-- StarterGui.voltage.coolio.ImageLabel
+G2L["37"] = Instance.new("ImageLabel", G2L["3"]);
+G2L["37"]["Interactable"] = false;
+G2L["37"]["BorderSizePixel"] = 0;
+G2L["37"]["ScaleType"] = Enum.ScaleType.Fit;
+G2L["37"]["BackgroundColor3"] = Color3.fromRGB(163, 0, 255);
+G2L["37"]["ImageColor3"] = Color3.fromRGB(235, 0, 255);
+G2L["37"]["Image"] = [[rbxassetid://86721820108224]];
+G2L["37"]["Size"] = UDim2.new(0, 80, 0, 41);
+G2L["37"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["37"]["BackgroundTransparency"] = 1;
+G2L["37"]["Position"] = UDim2.new(0.32336, 0, -0.00587, 0);
+
+
+-- StarterGui.voltage.coolio.TabBtn1
+G2L["38"] = Instance.new("TextButton", G2L["3"]);
+G2L["38"]["TextWrapped"] = true;
+G2L["38"]["BorderSizePixel"] = 0;
+G2L["38"]["TextSize"] = 14;
+G2L["38"]["TextScaled"] = true;
+G2L["38"]["TextColor3"] = Color3.fromRGB(159, 21, 244);
+G2L["38"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["38"]["FontFace"] = Font.new([[rbxasset://fonts/families/Zekton.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["38"]["Size"] = UDim2.new(0.18185, 0, 0.06944, 0);
+G2L["38"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["38"]["Text"] = [[Farming]];
+G2L["38"]["Name"] = [[TabBtn1]];
+G2L["38"]["Position"] = UDim2.new(0.01297, 0, 0.35887, 0);
+
+
+-- StarterGui.voltage.coolio.TabBtn1.LocalScript
+G2L["39"] = Instance.new("LocalScript", G2L["38"]);
+
+
+
+-- StarterGui.voltage.coolio.TabBtn1.UICorner
+G2L["3a"] = Instance.new("UICorner", G2L["38"]);
+
+
+
+-- StarterGui.voltage.coolio.TabBtn1.UIStroke
+G2L["3b"] = Instance.new("UIStroke", G2L["38"]);
+G2L["3b"]["Color"] = Color3.fromRGB(159, 21, 244);
+G2L["3b"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
+
+
+-- StarterGui.voltage.coolio.TabFrame4
+G2L["3c"] = Instance.new("Frame", G2L["3"]);
+G2L["3c"]["Visible"] = false;
+G2L["3c"]["BorderSizePixel"] = 0;
+G2L["3c"]["BackgroundColor3"] = Color3.fromRGB(163, 0, 255);
+G2L["3c"]["Size"] = UDim2.new(1, 0, 0.82176, 0);
+G2L["3c"]["Position"] = UDim2.new(0, 0, 0.17824, 0);
+G2L["3c"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["3c"]["Name"] = [[TabFrame4]];
+G2L["3c"]["BackgroundTransparency"] = 0.95;
+
+
+-- StarterGui.voltage.coolio.TabFrame4.UICorner
+G2L["3d"] = Instance.new("UICorner", G2L["3c"]);
+
+
+
+-- StarterGui.voltage.coolio.TabFrame4.Text
+G2L["3e"] = Instance.new("TextLabel", G2L["3c"]);
+G2L["3e"]["TextWrapped"] = true;
+G2L["3e"]["BorderSizePixel"] = 0;
+G2L["3e"]["TextSize"] = 14;
+G2L["3e"]["TextScaled"] = true;
+G2L["3e"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["3e"]["FontFace"] = Font.new([[rbxasset://fonts/families/IndieFlower.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["3e"]["TextColor3"] = Color3.fromRGB(193, 66, 255);
+G2L["3e"]["BackgroundTransparency"] = 1;
+G2L["3e"]["Size"] = UDim2.new(1, 0, 0.1088, 0);
+G2L["3e"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["3e"]["Text"] = [[Boosts]];
+G2L["3e"]["Name"] = [[Text]];
+G2L["3e"]["Position"] = UDim2.new(0, 0, 0.89014, 0);
+
+
+-- StarterGui.voltage.coolio.TabFrame4.fps
+G2L["3f"] = Instance.new("TextButton", G2L["3c"]);
+G2L["3f"]["TextWrapped"] = true;
+G2L["3f"]["BorderSizePixel"] = 0;
+G2L["3f"]["TextSize"] = 14;
+G2L["3f"]["TextScaled"] = true;
+G2L["3f"]["TextColor3"] = Color3.fromRGB(159, 21, 244);
+G2L["3f"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["3f"]["FontFace"] = Font.new([[rbxassetid://11322590111]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["3f"]["Size"] = UDim2.new(0.49877, 0, 0.6502, 0);
+G2L["3f"]["BorderColor3"] = Color3.fromRGB(159, 21, 244);
+G2L["3f"]["Text"] = [[Fps]];
+G2L["3f"]["Name"] = [[fps]];
+G2L["3f"]["Position"] = UDim2.new(0.32165, 0, 0.06006, 0);
+
+
+-- StarterGui.voltage.coolio.TabFrame4.fps.LocalScript
+G2L["40"] = Instance.new("LocalScript", G2L["3f"]);
+
+
+
+-- StarterGui.voltage.coolio.TabFrame4.fps.LocalScript
+G2L["41"] = Instance.new("LocalScript", G2L["3f"]);
+
+
+
+-- StarterGui.voltage.coolio.TabFrame4.fps.LocalScript
+G2L["42"] = Instance.new("LocalScript", G2L["3f"]);
+
+
+
+-- StarterGui.voltage.coolio.TabFrame4.fps.LocalScript
+G2L["43"] = Instance.new("LocalScript", G2L["3f"]);
+
+
+
+-- StarterGui.voltage.coolio.TabFrame4.fps.UICorner
+G2L["44"] = Instance.new("UICorner", G2L["3f"]);
+G2L["44"]["CornerRadius"] = UDim.new(1, 0);
+
+
+-- StarterGui.voltage.coolio.TabFrame4.fps.UIStroke
+G2L["45"] = Instance.new("UIStroke", G2L["3f"]);
+G2L["45"]["Color"] = Color3.fromRGB(129, 17, 255);
+G2L["45"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
+
+
+-- StarterGui.voltage.coolio.TabBtn4
+G2L["46"] = Instance.new("TextButton", G2L["3"]);
+G2L["46"]["TextWrapped"] = true;
+G2L["46"]["BorderSizePixel"] = 0;
+G2L["46"]["TextSize"] = 14;
+G2L["46"]["TextScaled"] = true;
+G2L["46"]["TextColor3"] = Color3.fromRGB(159, 21, 244);
+G2L["46"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["46"]["FontFace"] = Font.new([[rbxasset://fonts/families/Zekton.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["46"]["Size"] = UDim2.new(0.18077, 0, 0.06944, 0);
+G2L["46"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["46"]["Text"] = [[Fps]];
+G2L["46"]["Name"] = [[TabBtn4]];
+G2L["46"]["Position"] = UDim2.new(0.01482, 0, 0.46175, 0);
+
+
+-- StarterGui.voltage.coolio.TabBtn4.LocalScript
+G2L["47"] = Instance.new("LocalScript", G2L["46"]);
+
+
+
+-- StarterGui.voltage.coolio.TabBtn4.UICorner
+G2L["48"] = Instance.new("UICorner", G2L["46"]);
+
+
+
+-- StarterGui.voltage.coolio.TabBtn4.UIStroke
+G2L["49"] = Instance.new("UIStroke", G2L["46"]);
+G2L["49"]["Color"] = Color3.fromRGB(159, 21, 244);
+G2L["49"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
+
+
+-- StarterGui.voltage.coolio.line
+G2L["4a"] = Instance.new("TextButton", G2L["3"]);
+G2L["4a"]["Interactable"] = false;
+G2L["4a"]["BorderSizePixel"] = 0;
+G2L["4a"]["TextSize"] = 14;
+G2L["4a"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["4a"]["BackgroundColor3"] = Color3.fromRGB(175, 0, 244);
+G2L["4a"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["4a"]["Selectable"] = false;
+G2L["4a"]["BackgroundTransparency"] = 0.4;
+G2L["4a"]["Size"] = UDim2.new(0, 541, 0, -3);
+G2L["4a"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["4a"]["Text"] = [[]];
+G2L["4a"]["Name"] = [[line]];
+G2L["4a"]["Position"] = UDim2.new(0, 0, 0.14217, 0);
+
+
+-- StarterGui.voltage.coolio.TabFrame1
+G2L["4b"] = Instance.new("Frame", G2L["3"]);
+G2L["4b"]["Visible"] = false;
+G2L["4b"]["BorderSizePixel"] = 0;
+G2L["4b"]["BackgroundColor3"] = Color3.fromRGB(163, 0, 255);
+G2L["4b"]["Size"] = UDim2.new(1, 0, 0.82176, 0);
+G2L["4b"]["Position"] = UDim2.new(0, 0, 0.17824, 0);
+G2L["4b"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["4b"]["Name"] = [[TabFrame1]];
+G2L["4b"]["BackgroundTransparency"] = 0.95;
+
+
+-- StarterGui.voltage.coolio.TabFrame1.UICorner
+G2L["4c"] = Instance.new("UICorner", G2L["4b"]);
+
+
+
+-- StarterGui.voltage.coolio.TabFrame1.Text
+G2L["4d"] = Instance.new("TextLabel", G2L["4b"]);
+G2L["4d"]["TextWrapped"] = true;
+G2L["4d"]["BorderSizePixel"] = 0;
+G2L["4d"]["TextSize"] = 14;
+G2L["4d"]["TextScaled"] = true;
+G2L["4d"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["4d"]["FontFace"] = Font.new([[rbxasset://fonts/families/IndieFlower.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["4d"]["TextColor3"] = Color3.fromRGB(193, 66, 255);
+G2L["4d"]["BackgroundTransparency"] = 1;
+G2L["4d"]["Size"] = UDim2.new(1, 0, 0.1088, 0);
+G2L["4d"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["4d"]["Text"] = [[Farming]];
+G2L["4d"]["Name"] = [[Text]];
+G2L["4d"]["Position"] = UDim2.new(-0.00128, 0, 0.89014, 0);
+
+
+-- StarterGui.voltage.coolio.TabFrame1.lift
+G2L["4e"] = Instance.new("TextButton", G2L["4b"]);
+G2L["4e"]["TextWrapped"] = true;
+G2L["4e"]["BorderSizePixel"] = 0;
+G2L["4e"]["TextSize"] = 50;
+G2L["4e"]["TextColor3"] = Color3.fromRGB(159, 21, 244);
+G2L["4e"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["4e"]["FontFace"] = Font.new([[rbxasset://fonts/families/Zekton.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["4e"]["Size"] = UDim2.new(0.26549, 0, 0.2301, 0);
+G2L["4e"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["4e"]["Text"] = [[Lift]];
+G2L["4e"]["Name"] = [[lift]];
+G2L["4e"]["Position"] = UDim2.new(0.36455, 0, 0.14261, 0);
+
+
+-- StarterGui.voltage.coolio.TabFrame1.lift.LocalScript
+G2L["4f"] = Instance.new("LocalScript", G2L["4e"]);
+
+
+
+-- StarterGui.voltage.coolio.TabFrame1.lift.UICorner
+G2L["50"] = Instance.new("UICorner", G2L["4e"]);
+G2L["50"]["CornerRadius"] = UDim.new(1, 0);
+
+
+-- StarterGui.voltage.coolio.TabFrame1.lift.UIStroke
+G2L["51"] = Instance.new("UIStroke", G2L["4e"]);
+G2L["51"]["Color"] = Color3.fromRGB(159, 21, 244);
+G2L["51"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
+
+
+-- StarterGui.voltage.coolio.TabFrame1.equip
+G2L["52"] = Instance.new("TextButton", G2L["4b"]);
+G2L["52"]["TextWrapped"] = true;
+G2L["52"]["BorderSizePixel"] = 0;
+G2L["52"]["TextSize"] = 50;
+G2L["52"]["TextColor3"] = Color3.fromRGB(159, 21, 244);
+G2L["52"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["52"]["FontFace"] = Font.new([[rbxasset://fonts/families/Zekton.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["52"]["Size"] = UDim2.new(0.26549, 0, 0.2301, 0);
+G2L["52"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["52"]["Text"] = [[Equip]];
+G2L["52"]["Name"] = [[equip]];
+G2L["52"]["Position"] = UDim2.new(0.3664, 0, 0.42867, 0);
+
+
+-- StarterGui.voltage.coolio.TabFrame1.equip.LocalScript
+G2L["53"] = Instance.new("LocalScript", G2L["52"]);
+
+
+
+-- StarterGui.voltage.coolio.TabFrame1.equip.UICorner
+G2L["54"] = Instance.new("UICorner", G2L["52"]);
+G2L["54"]["CornerRadius"] = UDim.new(1, 0);
+
+
+-- StarterGui.voltage.coolio.TabFrame1.equip.UIStroke
+G2L["55"] = Instance.new("UIStroke", G2L["52"]);
+G2L["55"]["Color"] = Color3.fromRGB(159, 21, 244);
+G2L["55"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
+
+
+-- StarterGui.voltage.coolio.TabFrame1.ping farm
+G2L["56"] = Instance.new("TextButton", G2L["4b"]);
+G2L["56"]["TextWrapped"] = true;
+G2L["56"]["BorderSizePixel"] = 0;
+G2L["56"]["TextSize"] = 50;
+G2L["56"]["TextColor3"] = Color3.fromRGB(159, 21, 244);
+G2L["56"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["56"]["FontFace"] = Font.new([[rbxasset://fonts/families/Zekton.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["56"]["Size"] = UDim2.new(0.26549, 0, 0.2301, 0);
+G2L["56"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["56"]["Text"] = [[Ping]];
+G2L["56"]["Name"] = [[ping farm]];
+G2L["56"]["Position"] = UDim2.new(0.69542, 0, 0.23797, 0);
+
+
+-- StarterGui.voltage.coolio.TabFrame1.ping farm.LocalScript
+G2L["57"] = Instance.new("LocalScript", G2L["56"]);
+
+
+
+-- StarterGui.voltage.coolio.TabFrame1.ping farm.LocalScript
+G2L["58"] = Instance.new("LocalScript", G2L["56"]);
+
+
+
+-- StarterGui.voltage.coolio.TabFrame1.ping farm.UICorner
+G2L["59"] = Instance.new("UICorner", G2L["56"]);
+G2L["59"]["CornerRadius"] = UDim.new(1, 0);
+
+
+-- StarterGui.voltage.coolio.TabFrame1.ping farm.UIStroke
+G2L["5a"] = Instance.new("UIStroke", G2L["56"]);
+G2L["5a"]["Color"] = Color3.fromRGB(159, 21, 244);
+G2L["5a"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
+
+
+-- StarterGui.voltage.coolio.TabFrame5
+G2L["5b"] = Instance.new("Frame", G2L["3"]);
+G2L["5b"]["Visible"] = false;
+G2L["5b"]["Interactable"] = false;
+G2L["5b"]["BorderSizePixel"] = 0;
+G2L["5b"]["BackgroundColor3"] = Color3.fromRGB(163, 0, 255);
+G2L["5b"]["Size"] = UDim2.new(1, 0, 0.82176, 0);
+G2L["5b"]["Position"] = UDim2.new(0, 0, 0.12973, 0);
+G2L["5b"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["5b"]["Name"] = [[TabFrame5]];
+G2L["5b"]["BackgroundTransparency"] = 0.95;
+
+
+-- StarterGui.voltage.coolio.TabFrame5.LocalScript
+G2L["5c"] = Instance.new("LocalScript", G2L["5b"]);
+
+
+
+-- StarterGui.voltage.coolio.TabFrame5.UICorner
+G2L["5d"] = Instance.new("UICorner", G2L["5b"]);
+
+
+
+-- StarterGui.voltage.coolio.TabFrame5.Text
+G2L["5e"] = Instance.new("TextLabel", G2L["5b"]);
+G2L["5e"]["TextWrapped"] = true;
+G2L["5e"]["BorderSizePixel"] = 0;
+G2L["5e"]["TextSize"] = 14;
+G2L["5e"]["TextScaled"] = true;
+G2L["5e"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["5e"]["FontFace"] = Font.new([[rbxasset://fonts/families/IndieFlower.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["5e"]["TextColor3"] = Color3.fromRGB(193, 66, 255);
+G2L["5e"]["BackgroundTransparency"] = 1;
+G2L["5e"]["Size"] = UDim2.new(1, 0, 0.1088, 0);
+G2L["5e"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["5e"]["Text"] = [[Statistics]];
+G2L["5e"]["Name"] = [[Text]];
+G2L["5e"]["Position"] = UDim2.new(-0.00128, 0, 0.96733, 0);
+
+
+-- StarterGui.voltage.coolio.TabFrame5.ping
+G2L["5f"] = Instance.new("TextLabel", G2L["5b"]);
+G2L["5f"]["Interactable"] = false;
+G2L["5f"]["BorderSizePixel"] = 0;
+G2L["5f"]["TextSize"] = 30;
+G2L["5f"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["5f"]["FontFace"] = Font.new([[rbxasset://fonts/families/Zekton.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["5f"]["TextColor3"] = Color3.fromRGB(159, 21, 244);
+G2L["5f"]["Size"] = UDim2.new(0, 170, 0, 48);
+G2L["5f"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["5f"]["Text"] = [[ping]];
+G2L["5f"]["Name"] = [[ping]];
+G2L["5f"]["Position"] = UDim2.new(0.68566, 0, 0.5078, 0);
+
+
+-- StarterGui.voltage.coolio.TabFrame5.ping.LocalScript
+G2L["60"] = Instance.new("LocalScript", G2L["5f"]);
+
+
+
+-- StarterGui.voltage.coolio.TabFrame5.ping.UICorner
+G2L["61"] = Instance.new("UICorner", G2L["5f"]);
+G2L["61"]["CornerRadius"] = UDim.new(1, 0);
+
+
+-- StarterGui.voltage.coolio.TabFrame5.ping.UIStroke
+G2L["62"] = Instance.new("UIStroke", G2L["5f"]);
+G2L["62"]["Color"] = Color3.fromRGB(159, 21, 244);
+G2L["62"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
+
+
+-- StarterGui.voltage.coolio.TabFrame5.gained
+G2L["63"] = Instance.new("TextLabel", G2L["5b"]);
+G2L["63"]["Interactable"] = false;
+G2L["63"]["BorderSizePixel"] = 0;
+G2L["63"]["TextSize"] = 30;
+G2L["63"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["63"]["FontFace"] = Font.new([[rbxasset://fonts/families/Zekton.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["63"]["TextColor3"] = Color3.fromRGB(159, 21, 244);
+G2L["63"]["Size"] = UDim2.new(0, 264, 0, 48);
+G2L["63"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["63"]["Text"] = [[gain]];
+G2L["63"]["Name"] = [[gained]];
+G2L["63"]["Position"] = UDim2.new(0.19538, 0, 0.2769, 0);
+
+
+-- StarterGui.voltage.coolio.TabFrame5.gained.LocalScript
+G2L["64"] = Instance.new("LocalScript", G2L["63"]);
+
+
+
+-- StarterGui.voltage.coolio.TabFrame5.gained.UICorner
+G2L["65"] = Instance.new("UICorner", G2L["63"]);
+G2L["65"]["CornerRadius"] = UDim.new(1, 0);
+
+
+-- StarterGui.voltage.coolio.TabFrame5.gained.UIStroke
+G2L["66"] = Instance.new("UIStroke", G2L["63"]);
+G2L["66"]["Color"] = Color3.fromRGB(159, 21, 244);
+G2L["66"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
+
+
+-- StarterGui.voltage.coolio.TabFrame5.sps
+G2L["67"] = Instance.new("TextLabel", G2L["5b"]);
+G2L["67"]["Interactable"] = false;
+G2L["67"]["BorderSizePixel"] = 0;
+G2L["67"]["TextSize"] = 30;
+G2L["67"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["67"]["FontFace"] = Font.new([[rbxasset://fonts/families/Zekton.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["67"]["TextColor3"] = Color3.fromRGB(159, 21, 244);
+G2L["67"]["Size"] = UDim2.new(0, 265, 0, 48);
+G2L["67"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["67"]["Text"] = [[1200]];
+G2L["67"]["Name"] = [[sps]];
+G2L["67"]["Position"] = UDim2.new(0.19353, 0, 0.5078, 0);
+
+
+-- StarterGui.voltage.coolio.TabFrame5.sps.LocalScript
+G2L["68"] = Instance.new("LocalScript", G2L["67"]);
+
+
+
+-- StarterGui.voltage.coolio.TabFrame5.sps.UICorner
+G2L["69"] = Instance.new("UICorner", G2L["67"]);
+G2L["69"]["CornerRadius"] = UDim.new(1, 0);
+
+
+-- StarterGui.voltage.coolio.TabFrame5.sps.UIStroke
+G2L["6a"] = Instance.new("UIStroke", G2L["67"]);
+G2L["6a"]["Color"] = Color3.fromRGB(159, 21, 244);
+G2L["6a"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
+
+
+-- StarterGui.voltage.coolio.TabFrame5.dw count
+G2L["6b"] = Instance.new("TextLabel", G2L["5b"]);
+G2L["6b"]["Interactable"] = false;
+G2L["6b"]["BorderSizePixel"] = 0;
+G2L["6b"]["TextSize"] = 30;
+G2L["6b"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["6b"]["FontFace"] = Font.new([[rbxasset://fonts/families/Zekton.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["6b"]["TextColor3"] = Color3.fromRGB(159, 21, 244);
+G2L["6b"]["Size"] = UDim2.new(0, 171, 0, 48);
+G2L["6b"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["6b"]["Text"] = [[dw]];
+G2L["6b"]["Name"] = [[dw count]];
+G2L["6b"]["Position"] = UDim2.new(0.68381, 0, 0.26782, 0);
+
+
+-- StarterGui.voltage.coolio.TabFrame5.dw count.LocalScript
+G2L["6c"] = Instance.new("LocalScript", G2L["6b"]);
+
+
+
+-- StarterGui.voltage.coolio.TabFrame5.dw count.UICorner
+G2L["6d"] = Instance.new("UICorner", G2L["6b"]);
+G2L["6d"]["CornerRadius"] = UDim.new(1, 0);
+
+
+-- StarterGui.voltage.coolio.TabFrame5.dw count.UIStroke
+G2L["6e"] = Instance.new("UIStroke", G2L["6b"]);
+G2L["6e"]["Color"] = Color3.fromRGB(159, 21, 244);
+G2L["6e"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
+
+
+-- StarterGui.voltage.coolio.TabFrame5.total
+G2L["6f"] = Instance.new("TextLabel", G2L["5b"]);
+G2L["6f"]["Interactable"] = false;
+G2L["6f"]["BorderSizePixel"] = 0;
+G2L["6f"]["TextSize"] = 30;
+G2L["6f"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["6f"]["FontFace"] = Font.new([[rbxasset://fonts/families/Zekton.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["6f"]["TextColor3"] = Color3.fromRGB(159, 21, 244);
+G2L["6f"]["Size"] = UDim2.new(0, 388, 0, 48);
+G2L["6f"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["6f"]["Text"] = [[total]];
+G2L["6f"]["Name"] = [[total]];
+G2L["6f"]["Position"] = UDim2.new(0.23789, 0, 0.03624, 0);
+
+
+-- StarterGui.voltage.coolio.TabFrame5.total.LocalScript
+G2L["70"] = Instance.new("LocalScript", G2L["6f"]);
+
+
+
+-- StarterGui.voltage.coolio.TabFrame5.total.UICorner
+G2L["71"] = Instance.new("UICorner", G2L["6f"]);
+G2L["71"]["CornerRadius"] = UDim.new(1, 0);
+
+
+-- StarterGui.voltage.coolio.TabFrame5.total.UIStroke
+G2L["72"] = Instance.new("UIStroke", G2L["6f"]);
+G2L["72"]["Color"] = Color3.fromRGB(159, 21, 244);
+G2L["72"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
+
+
+-- StarterGui.voltage.coolio.TabBtn5
+G2L["73"] = Instance.new("TextButton", G2L["3"]);
+G2L["73"]["TextWrapped"] = true;
+G2L["73"]["BorderSizePixel"] = 0;
+G2L["73"]["TextSize"] = 14;
+G2L["73"]["TextScaled"] = true;
+G2L["73"]["TextColor3"] = Color3.fromRGB(159, 21, 244);
+G2L["73"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["73"]["FontFace"] = Font.new([[rbxasset://fonts/families/Zekton.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["73"]["Size"] = UDim2.new(0.18077, 0, 0.06944, 0);
+G2L["73"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["73"]["Text"] = [[Stats]];
+G2L["73"]["Name"] = [[TabBtn5]];
+G2L["73"]["Position"] = UDim2.new(0.01482, 0, 0.56623, 0);
+
+
+-- StarterGui.voltage.coolio.TabBtn5.LocalScript
+G2L["74"] = Instance.new("LocalScript", G2L["73"]);
+
+
+
+-- StarterGui.voltage.coolio.TabBtn5.UICorner
+G2L["75"] = Instance.new("UICorner", G2L["73"]);
+
+
+
+-- StarterGui.voltage.coolio.TabBtn5.UIStroke
+G2L["76"] = Instance.new("UIStroke", G2L["73"]);
+G2L["76"]["Color"] = Color3.fromRGB(159, 21, 244);
+G2L["76"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
+
+
+-- StarterGui.voltage.coolio.Front Page
+G2L["77"] = Instance.new("TextButton", G2L["3"]);
+G2L["77"]["TextWrapped"] = true;
+G2L["77"]["BorderSizePixel"] = 0;
+G2L["77"]["TextSize"] = 40;
+G2L["77"]["TextScaled"] = true;
+G2L["77"]["TextColor3"] = Color3.fromRGB(159, 21, 244);
+G2L["77"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["77"]["FontFace"] = Font.new([[rbxasset://fonts/families/Zekton.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["77"]["Size"] = UDim2.new(0.18077, 0, 0.06944, 0);
+G2L["77"]["BorderColor3"] = Color3.fromRGB(159, 21, 244);
+G2L["77"]["Text"] = [[Front]];
+G2L["77"]["Name"] = [[Front Page]];
+G2L["77"]["Position"] = UDim2.new(0.01482, 0, 0.17389, 0);
+
+
+-- StarterGui.voltage.coolio.Front Page.LocalScript
+G2L["78"] = Instance.new("LocalScript", G2L["77"]);
+
+
+
+-- StarterGui.voltage.coolio.Front Page.UICorner
+G2L["79"] = Instance.new("UICorner", G2L["77"]);
+
+
+
+-- StarterGui.voltage.coolio.Front Page.UIStroke
+G2L["7a"] = Instance.new("UIStroke", G2L["77"]);
+G2L["7a"]["Color"] = Color3.fromRGB(129, 17, 255);
+G2L["7a"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
+
+
+-- StarterGui.voltage.coolio.front pagess
+G2L["7b"] = Instance.new("Frame", G2L["3"]);
+G2L["7b"]["Visible"] = false;
+G2L["7b"]["Interactable"] = false;
+G2L["7b"]["BorderSizePixel"] = 0;
+G2L["7b"]["BackgroundColor3"] = Color3.fromRGB(163, 0, 255);
+G2L["7b"]["Size"] = UDim2.new(1, 0, 0.82176, 0);
+G2L["7b"]["Position"] = UDim2.new(0, 0, 0.11481, 0);
+G2L["7b"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["7b"]["Name"] = [[front pagess]];
+G2L["7b"]["BackgroundTransparency"] = 0.95;
+
+
+-- StarterGui.voltage.coolio.front pagess.UICorner
+G2L["7c"] = Instance.new("UICorner", G2L["7b"]);
+
+
+
+-- StarterGui.voltage.coolio.front pagess.Text
+G2L["7d"] = Instance.new("TextLabel", G2L["7b"]);
+G2L["7d"]["TextWrapped"] = true;
+G2L["7d"]["BorderSizePixel"] = 0;
+G2L["7d"]["TextSize"] = 14;
+G2L["7d"]["TextScaled"] = true;
+G2L["7d"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["7d"]["FontFace"] = Font.new([[rbxasset://fonts/families/IndieFlower.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["7d"]["TextColor3"] = Color3.fromRGB(193, 66, 255);
+G2L["7d"]["BackgroundTransparency"] = 1;
+G2L["7d"]["Size"] = UDim2.new(1, 0, 0.1542, 0);
+G2L["7d"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["7d"]["Text"] = [[https://discord.gg/k7bEfsZBhT]];
+G2L["7d"]["Name"] = [[Text]];
+G2L["7d"]["Position"] = UDim2.new(-0.00128, 0, 0.84473, 0);
+
+
+-- StarterGui.voltage.coolio.front pagess.welcome
+G2L["7e"] = Instance.new("TextLabel", G2L["7b"]);
+G2L["7e"]["Interactable"] = false;
+G2L["7e"]["BorderSizePixel"] = 0;
+G2L["7e"]["TextSize"] = 50;
+G2L["7e"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["7e"]["FontFace"] = Font.new([[rbxasset://fonts/families/Zekton.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["7e"]["TextColor3"] = Color3.fromRGB(159, 21, 244);
+G2L["7e"]["Size"] = UDim2.new(0, 388, 0, 48);
+G2L["7e"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["7e"]["Text"] = [[Welcome!]];
+G2L["7e"]["Name"] = [[welcome]];
+G2L["7e"]["Position"] = UDim2.new(0.22865, 0, 0.06803, 0);
+
+
+-- StarterGui.voltage.coolio.front pagess.welcome.UICorner
+G2L["7f"] = Instance.new("UICorner", G2L["7e"]);
+G2L["7f"]["CornerRadius"] = UDim.new(1, 0);
+
+
+-- StarterGui.voltage.coolio.front pagess.welcome.UIStroke
+G2L["80"] = Instance.new("UIStroke", G2L["7e"]);
+G2L["80"]["Color"] = Color3.fromRGB(159, 21, 244);
+G2L["80"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
+
+
+-- StarterGui.voltage.coolio.front pagess.ImageLabel
+G2L["81"] = Instance.new("ImageLabel", G2L["7b"]);
+G2L["81"]["BorderSizePixel"] = 0;
+G2L["81"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["81"]["Image"] = [[rbxassetid://120906969182124]];
+G2L["81"]["Size"] = UDim2.new(0, 116, 0, 114);
+G2L["81"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["81"]["BackgroundTransparency"] = 1;
+G2L["81"]["Position"] = UDim2.new(0.41405, 0, 0.29262, 0);
+
+
+-- StarterGui.voltage.LocalScript
+local function C_2()
+local script = G2L["2"];
+	local UserInputService = game:GetService("UserInputService")
+	
+	local screenGui = script.Parent -- assumes the LocalScript is inside the ScreenGui
+	local toggleKey = Enum.KeyCode.Z
+	
+	local isVisible = true
+	
+	UserInputService.InputBegan:Connect(function(input, gameProcessed)
+		if gameProcessed then return end
+	
+		if input.KeyCode == toggleKey then
+			isVisible = not isVisible
+			screenGui.Enabled = isVisible
+		end
+	end)
+	
+end;
+task.spawn(C_2);
+-- StarterGui.voltage.coolio.drag
+local function C_4()
+local script = G2L["4"];
+	local UIS = game:GetService("UserInputService")
+	local frame = script.Parent
+	
+	local dragToggle = nil
+	local dragSpeed = 0.1
+	local dragStart = nil
+	local startPos = nil
+	
+	local function updateInput(input)
+		local delta = input.Position - dragStart
+		local position = UDim2.new(startPos.X.Scale,startPos.X.Offset + delta.X, startPos.Y.Scale, startPos.Y.Offset + delta.Y)
+		game:GetService("TweenService"):Create(frame, TweenInfo.new(dragSpeed), {Position = position}):Play()
+	end
+	
+	frame.InputBegan:Connect(function(input)
+		if (input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch) then
+			dragToggle = true
+			dragStart = input.Position
+			startPos = frame.Position
+			input.Changed:Connect(function()
+				if input.UserInputState == Enum.UserInputState.End then
+					dragToggle = false
+				end
+			end)
+		end
+	end)
+	
+	UIS.InputChanged:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+			if dragToggle then
+				updateInput(input)
+			end
+		end
+	end)
+end;
+task.spawn(C_4);
+-- StarterGui.voltage.coolio.TabFrame2.800.LocalScript
+local function C_b()
+local script = G2L["b"];
+	local button = script.Parent 
+	
+	
+	local function onButtonClicked()
+	
+	
+		local Player = game.Players.LocalPlayer
+		local Market = game:GetService("MarketplaceService")
+		_G.Target = 835
+	
+		for i = _G.Target, 0, -1 do
+			Market:SignalPromptGamePassPurchaseFinished(Player, 5949054, true)
+			wait(1)
+		end
+	
+	
+	end
+	
+	
+	button.MouseButton1Click:Connect(onButtonClicked)
+end;
+task.spawn(C_b);
+-- StarterGui.voltage.coolio.TabFrame2.100.LocalScript
+local function C_f()
+local script = G2L["f"];
+	local button = script.Parent 
+	
+	
+	local function onButtonClicked()
+	
+	
+		local Player = game.Players.LocalPlayer
+		local Market = game:GetService("MarketplaceService")
+		_G.Target = 95
+	
+		for i = _G.Target, 0, -1 do
+			Market:SignalPromptGamePassPurchaseFinished(Player, 5949054, true)
+			wait(1)
+		end
+	
+	
+	end
+	
+	
+	button.MouseButton1Click:Connect(onButtonClicked)
+end;
+task.spawn(C_f);
+-- StarterGui.voltage.coolio.TabFrame2.dw.LocalScript
+local function C_13()
+local script = G2L["13"];
+	local textLabel = script.Parent
+	local player = game.Players.LocalPlayer
+	
+	local TARGET_TOOLNAME = "Double Weight"
+	
+	local function countDoubleWeights()
+		local count = 0
+	
+		-- Count in Backpack
+		local backpack = player:FindFirstChild("Backpack")
+		if backpack then
+			for _, item in ipairs(backpack:GetChildren()) do
+				if item:IsA("Tool") and item.Name == TARGET_TOOLNAME then
+					count = count + 1
+				end
+			end
+		end
+	
+		-- Count in Character
+		local character = player.Character or player.CharacterAdded:Wait()
+		for _, item in ipairs(character:GetChildren()) do
+			if item:IsA("Tool") and item.Name == TARGET_TOOLNAME then
+				count = count + 1
+			end
+		end
+	
+		return count
+	end
+	
+	local function update()
+		textLabel.Text = tostring(countDoubleWeights())
+	end
+	
+	-- Update when tool added/removed from backpack
+	player.Backpack.ChildAdded:Connect(update)
+	player.Backpack.ChildRemoved:Connect(update)
+	
+	-- Update when tool added/removed from character
+	local function connectCharacter(char)
+		char.ChildAdded:Connect(update)
+		char.ChildRemoved:Connect(update)
+		update()
+	end
+	
+	player.CharacterAdded:Connect(connectCharacter)
+	connectCharacter(player.Character or player.CharacterAdded:Wait())
+end;
+task.spawn(C_13);
+-- StarterGui.voltage.coolio.TabBtn2.LocalScript
+local function C_17()
+local script = G2L["17"];
+	--Variables--
+	local a = script.Parent
+	local one = script.Parent.Parent.TabFrame1
+	local two = script.Parent.Parent.TabFrame2
+	local three = script.Parent.Parent.TabFrame3
+	local four = script.Parent.Parent.TabFrame4
+	local five = script.Parent.Parent.TabFrame5
+	local front = script.Parent.Parent["front pagess"]
+	
+	--Code--
+	a.MouseButton1Click:Connect(function()
+		one.Visible = false
+		two.Visible = true
+		three.Visible = false
+		four.Visible = false
+		five.Visible = false
+		front.Visible = false
+	end)
+end;
+task.spawn(C_17);
+-- StarterGui.voltage.coolio.TabBtn3.LocalScript
+local function C_1c()
+local script = G2L["1c"];
+	--Variables--
+	local a = script.Parent
+	local one = script.Parent.Parent.TabFrame1
+	local two = script.Parent.Parent.TabFrame2
+	local three = script.Parent.Parent.TabFrame3
+	local four = script.Parent.Parent.TabFrame4
+	local five = script.Parent.Parent.TabFrame5
+	local front = script.Parent.Parent["front pagess"]
+	
+	--Code--
+	a.MouseButton1Click:Connect(function()
+		one.Visible = false
+		two.Visible = false
+		three.Visible = true
+		four.Visible = false
+		five.Visible = false
+		front.Visible = false
+		
+	end)
+end;
+task.spawn(C_1c);
+-- StarterGui.voltage.coolio.TabFrame3.Rumble.LocalScript
+local function C_23()
+local script = G2L["23"];
+	local button = script.Parent 
+	
+	
+	local function onButtonClicked()
+	
+	
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1938, 446, -5296)
+	
+	end
+	
+	
+	button.MouseButton1Click:Connect(onButtonClicked)
+	
+end;
+task.spawn(C_23);
+-- StarterGui.voltage.coolio.TabFrame3.High.LocalScript
+local function C_27()
+local script = G2L["27"];
+	local button = script.Parent 
+	
+	
+	local function onButtonClicked()
+	
+	
+		local player = game.Players.LocalPlayer
+		local character = player.Character or player.CharacterAdded:Wait()
+		local hrp = character:WaitForChild("HumanoidRootPart")
+	
+		-- Create invisible platform 15,000 studs above the character
+		local platform = Instance.new("Part")
+		platform.Size = Vector3.new(1000, 10, 1000)
+		platform.Anchored = true
+		platform.Transparency = 0.5 -- invisible
+		platform.CanCollide = true
+		platform.Position = hrp.Position + Vector3.new(0, 15000, 0)
+		platform.Name = "DontDeleteMe"
+		platform.Parent = workspace
+		platform.Color=Color3.new(0.478431, 0.0235294, 1)
+		platform.Material=Enum.Material.Neon
+	
+		-- Teleport player 5 studs above the platform
+		hrp.CFrame = platform.CFrame + Vector3.new(0, 10, 0)
+	
+	end
+	
+	
+	button.MouseButton1Click:Connect(onButtonClicked)
+	
+end;
+task.spawn(C_27);
+-- StarterGui.voltage.coolio.TabFrame3.inf yield.LocalScript
+local function C_2b()
+local script = G2L["2b"];
+	local button = script.Parent 
+	
+	
+	local function onButtonClicked()
+	
+	
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source"))()
+	
+	end
+	
+	
+	button.MouseButton1Click:Connect(onButtonClicked)
+	
+end;
+task.spawn(C_2b);
+-- StarterGui.voltage.coolio.TabFrame3.Reviz.LocalScript
+local function C_2f()
+local script = G2L["2f"];
+	local button = script.Parent 
+	
+	
+	local function onButtonClicked()
+	
+	
+		loadstring(game:HttpGetAsync("https://pastebin.com/raw/gQg0G6iA"))()
+	
+	end
+	
+	
+	button.MouseButton1Click:Connect(onButtonClicked)
+	
+end;
+task.spawn(C_2f);
+-- StarterGui.voltage.coolio.TabFrame3.D/N.LocalScript
+local function C_33()
+local script = G2L["33"];
+	local button = script.Parent 
+	local lighting = game:GetService("Lighting")
+	
+	local isDayTime = true
+	
+	local function onButtonClicked()
+		if isDayTime then
+			lighting.ClockTime = 4   -- night
+			isDayTime = false
+		else
+			lighting.ClockTime = 12  -- day
+			isDayTime = true
+		end
+	end
+	
+	button.MouseButton1Click:Connect(onButtonClicked)
+	
+end;
+task.spawn(C_33);
+-- StarterGui.voltage.coolio.TabBtn1.LocalScript
+local function C_39()
+local script = G2L["39"];
+	--Variables--
+	local a = script.Parent
+	local one = script.Parent.Parent.TabFrame1
+	local two = script.Parent.Parent.TabFrame2
+	local three = script.Parent.Parent.TabFrame3
+	local four = script.Parent.Parent.TabFrame4
+	local five = script.Parent.Parent.TabFrame5
+	local front = script.Parent.Parent["front pagess"]
+	--Code--
+	a.MouseButton1Click:Connect(function()
+		one.Visible = true
+		two.Visible = false
+		three.Visible = false
+		four.Visible = false
+		five.Visible = false
+		front.Visible = false
+	end)
+end;
+task.spawn(C_39);
+-- StarterGui.voltage.coolio.TabFrame4.fps.LocalScript
+local function C_40()
+local script = G2L["40"];
+	local button = script.Parent 
+	
+	
+	local function onButtonClicked()
+	
+	
+		local lighting = game:GetService("Lighting")
+	
+		local atmosphere = lighting:FindFirstChildOfClass("Atmosphere")
+		if atmosphere then
+			atmosphere:Destroy()
+		end
+	
+		lighting.FogEnd = 100000
+	
+	
+	
+		local player = game:GetService("Players").LocalPlayer
+		local hud = player:FindFirstChild("PlayerGui"):FindFirstChild("HUD")
+	
+		if hud then
+			local frame = hud:FindFirstChild("Frame")
+			if frame then
+				for _, v in pairs(frame:GetChildren()) do
+					if v.Name ~= "StrengthHolder" then
+						v:Destroy()
+					end
+				end
+			end
+	
+			local strengthHolder = frame:FindFirstChild("StrengthHolder")
+			if strengthHolder then
+				for _, obj in pairs(strengthHolder:GetChildren()) do
+					if obj:IsA("ImageLabel") or obj:IsA("LocalScript") then
+						obj:Destroy()
+					end
+				end
+			end
+		end
+	
+		local replicatedFirst = game:GetService("ReplicatedFirst")
+		local tourneyQ = replicatedFirst:FindFirstChild("TourneyQ")
+	
+		if tourneyQ then
+			tourneyQ:Destroy()
+		end
+	
+	
+	
+	
+		game:GetService("Players").LocalPlayer.PlayerGui.HUD:Destroy()
+	
+	
+	
+	
+	end
+	
+	button.MouseButton1Click:Connect(onButtonClicked)
+end;
+task.spawn(C_40);
+-- StarterGui.voltage.coolio.TabFrame4.fps.LocalScript
+local function C_41()
+local script = G2L["41"];
+	local AntiAfk = script.Parent 
+	
+	
+	local function onButtonClicked()
+	
+	
+	
+		local Players = game:GetService("Players")
+		local VirtualUser = game:GetService("VirtualUser")
+	
+		local player = Players.LocalPlayer
+	
+		player.Idled:Connect(function()
+			VirtualUser:CaptureController()
+			VirtualUser:ClickButton2(Vector2.new(0, 0))
+		end)
+	
+	
+	
+	
+	
+	
+	end
+	
+	
+	AntiAfk.MouseButton1Click:Connect(onButtonClicked)
+end;
+task.spawn(C_41);
+-- StarterGui.voltage.coolio.TabFrame4.fps.LocalScript
+local function C_42()
+local script = G2L["42"];
+	local FOV = script.Parent 
+	
+	
+	local function onButtonClicked()
+	
+		
+	
+		local players = game:GetService("Players")
+		local player = players.LocalPlayer
+	
+	
+	
+		local FOV = script.Parent 
+		if player then
+			player.CameraMaxZoomDistance = 1000
+		end
+	
+	
+	
+	
+	
+	end
+	
+	
+	FOV.MouseButton1Click:Connect(onButtonClicked)
+	
+	
+end;
+task.spawn(C_42);
+-- StarterGui.voltage.coolio.TabFrame4.fps.LocalScript
+local function C_43()
+local script = G2L["43"];
+	local FOV = script.Parent 
+	
+	
+	local function onButtonClicked()
+	
+	
+	
+		local StarterGui = game:GetService("StarterGui")
+	
+		StarterGui:SetCoreGuiEnabled(Enum.CoreGuiType.Backpack, false)
+	
+	
+	
+	
+	
+	
+	end
+	
+	
+	FOV.MouseButton1Click:Connect(onButtonClicked)
+	
+	
+end;
+task.spawn(C_43);
+-- StarterGui.voltage.coolio.TabBtn4.LocalScript
+local function C_47()
+local script = G2L["47"];
+	--Variables--
+	local a = script.Parent
+	local one = script.Parent.Parent.TabFrame1
+	local two = script.Parent.Parent.TabFrame2
+	local three = script.Parent.Parent.TabFrame3
+	local four = script.Parent.Parent.TabFrame4
+	local five = script.Parent.Parent.TabFrame5
+	local front = script.Parent.Parent["front pagess"]
+	
+	--Code--
+	a.MouseButton1Click:Connect(function()
+		one.Visible = false
+		two.Visible = false
+		three.Visible = false
+		four.Visible = true
+		five.Visible = false
+		front.Visible = false
+		
+	
+	end)
+end;
+task.spawn(C_47);
+-- StarterGui.voltage.coolio.TabFrame1.lift.LocalScript
+local function C_4f()
+local script = G2L["4f"];
+	local button = script.Parent
+	local player = game.Players.LocalPlayer
+	
+	local running = false
+	local loopTask = nil
+	
+	local function startLoop()
+		running = true
+	
+		loopTask = task.spawn(function()
+			while running do
+				local character = player.Character
+				if character then
+					for _, v in pairs(character:GetChildren()) do
+						if v.Name == "Double Weight" then
+							v:Activate()
+						end
+					end
+				end
+				task.wait(0.5)
+			end
+		end)
+	end
+	
+	local function stopLoop()
+		running = false
+	end
+	
+	button.MouseButton1Click:Connect(function()
+		if running then
+			stopLoop()
+			button.Text = "OFF" -- optional
+		else
+			startLoop()
+			button.Text = "ON" -- optional
+		end
+	end)
+	
+end;
+task.spawn(C_4f);
+-- StarterGui.voltage.coolio.TabFrame1.equip.LocalScript
+local function C_53()
+local script = G2L["53"];
+	local button = script.Parent 
+	
+	
+	local function onButtonClicked()
+		print("Equipped Double Weights")
+		for i, v in pairs(game.Players.LocalPlayer.Backpack:GetChildren()) do
+			if v.Name == "Double Weight" then
+				v.Parent = game.Players.LocalPlayer.Character
+				v:Activate()
+			end
+		end
+	end
+	
+	
+	button.MouseButton1Click:Connect(onButtonClicked)
+	
+end;
+task.spawn(C_53);
+-- StarterGui.voltage.coolio.TabFrame1.ping farm.LocalScript
+local function C_57()
+local script = G2L["57"];
+	local button = script.Parent
+	
+	local running = false 
+	
+	local function onButtonClicked()
+		if running then return end
+		running = true
+	
+		
+	
+		local Stats = game:GetService("Stats")
+		local Players = game:GetService("Players")
+		local Player = Players.LocalPlayer
+	
+		-- Safe ping getter
+		local function getPing()
+			local network = Stats:FindFirstChild("Network")
+			if not network then return 0 end
+	
+			local serverStats = network:FindFirstChild("ServerStatsItem") or network:FindFirstChild("ServerStatsItem_")
+			if not serverStats then return 0 end
+	
+			local pingItem = serverStats:FindFirstChild("Data Ping") or serverStats:FindFirstChild("Data Ping (ms)")
+			if not pingItem then return 0 end
+	
+			local success, ping = pcall(function()
+				return pingItem:GetValue()
+			end)
+	
+			return success and ping or 0
+		end
+	
+		local PING_STOP = 25000
+		local PING_RESUME = 1000
+	
+		while running do
+			local ping = getPing()
+	
+			if ping >= PING_STOP then
+				warn("High ping detected (" .. ping .. " ms). Pausing...")
+				repeat
+					task.wait(2)
+					ping = getPing()
+				until ping <= PING_RESUME
+				print("Ping recovered (" .. ping .. " ms). Resuming.")
+			end
+	
+			if Player.Character then
+				for _, v in pairs(Player.Character:GetChildren()) do
+					if v:IsA("Tool") and v.Name == "Double Weight" then
+						v:Activate()
+					end
+				end
+			end
+	
+			task.wait(0.6)
+		end
+	end
+	
+	button.MouseButton1Click:Connect(onButtonClicked)
+end;
+task.spawn(C_57);
+-- StarterGui.voltage.coolio.TabFrame1.ping farm.LocalScript
+local function C_58()
+local script = G2L["58"];
+	local button = script.Parent
+	local player = game.Players.LocalPlayer
+	
+	local function onButtonClicked()
+		
+	
+		task.spawn(function()
+			while true do
+				for _, v in pairs(player.Backpack:GetChildren()) do
+					if v.Name == "Double Weight" then
+						v.Parent = player.Character
+					end
+				end
+				task.wait(1) -- wait 1 second before looping again (you can change this)
+			end
+		end)
+	end
+	
+	button.MouseButton1Click:Connect(onButtonClicked)
+	
+end;
+task.spawn(C_58);
+-- StarterGui.voltage.coolio.TabFrame5.LocalScript
+local function C_5c()
+local script = G2L["5c"];
+	
+	local SGui = script.Parent
+	local Frame = SGui:WaitForChild("TextButton")
+	local Button = SGui:WaitForChild("Frame")
+	
+	Button.MouseButton1Up:Connect(function()
+		Frame.Visible = not Frame.Visible
+	end)
+end;
+task.spawn(C_5c);
+-- StarterGui.voltage.coolio.TabFrame5.ping.LocalScript
+local function C_60()
+local script = G2L["60"];
+	local textLabel = script.Parent
+	local Stats = game:GetService("Stats")
+	
+	local pingStat = Stats.Network.ServerStatsItem["Data Ping"]
+	
+	local function updatePing()
+		pcall(function()
+			if pingStat then
+				local ping = math.floor(pingStat:GetValue())
+				textLabel.Text = ping .. " ms"
+			end
+		end)
+	end
+	
+	
+	game:GetService("RunService").RenderStepped:Connect(updatePing)
+	
+	
+	updatePing()
+end;
+task.spawn(C_60);
+-- StarterGui.voltage.coolio.TabFrame5.gained.LocalScript
+local function C_64()
+local script = G2L["64"];
+	local textLabel = script.Parent
+	local player = game.Players.LocalPlayer
+	local strengthStat = player:FindFirstChild("leaderstats") and player.leaderstats:FindFirstChild("Strength")
+	local runService = game:GetService("RunService")
+	
+	if not strengthStat then
+		warn("Strength stat not found in leaderstats!")
+		return
+	end
+	
+	local lastStrength = strengthStat.Value
+	local totalStrengthGained = 0
+	
+	local function updateStrengthGained()
+		local currentStrength = strengthStat.Value
+		local strengthDifference = currentStrength - lastStrength
+		totalStrengthGained = totalStrengthGained + strengthDifference
+		lastStrength = currentStrength 
+	
+		textLabel.Text = " " .. totalStrengthGained
+	end
+	
+	
+	runService.RenderStepped:Connect(function()
+		updateStrengthGained()
+	end)
+	
+end;
+task.spawn(C_64);
+-- StarterGui.voltage.coolio.TabFrame5.sps.LocalScript
+local function C_68()
+local script = G2L["68"];
+	local label = script.Parent
+	local player = game:GetService("Players").LocalPlayer
+	local leaderstats = player:WaitForChild("leaderstats")
+	local strengthStat = leaderstats:WaitForChild("Strength")
+	local index = -1
+	local calibrated = false
+	
+	while true do
+		index = index + 1
+		local before = strengthStat.Value
+		task.wait(1)
+		if index <= 3 then
+			label.Text = "..."
+		else
+			local gained = strengthStat.Value - before
+			label.Text = "Sps = " .. tostring(gained)
+			if not calibrated then
+				calibrated = true
+			end
+		end
+	end
+	
+end;
+task.spawn(C_68);
+-- StarterGui.voltage.coolio.TabFrame5.dw count.LocalScript
+local function C_6c()
+local script = G2L["6c"];
+	local textLabel = script.Parent
+	local player = game.Players.LocalPlayer
+	
+	local TARGET_TOOLNAME = "Double Weight"
+	
+	local function countDoubleWeights()
+		local count = 0
+	
+		-- Count in Backpack
+		local backpack = player:FindFirstChild("Backpack")
+		if backpack then
+			for _, item in ipairs(backpack:GetChildren()) do
+				if item:IsA("Tool") and item.Name == TARGET_TOOLNAME then
+					count = count + 1
+				end
+			end
+		end
+	
+		-- Count in Character
+		local character = player.Character or player.CharacterAdded:Wait()
+		for _, item in ipairs(character:GetChildren()) do
+			if item:IsA("Tool") and item.Name == TARGET_TOOLNAME then
+				count = count + 1
+			end
+		end
+	
+		return count
+	end
+	
+	local function update()
+		textLabel.Text = tostring(countDoubleWeights())
+	end
+	
+	-- Update when tool added/removed from backpack
+	player.Backpack.ChildAdded:Connect(update)
+	player.Backpack.ChildRemoved:Connect(update)
+	
+	-- Update when tool added/removed from character
+	local function connectCharacter(char)
+		char.ChildAdded:Connect(update)
+		char.ChildRemoved:Connect(update)
+		update()
+	end
+	
+	player.CharacterAdded:Connect(connectCharacter)
+	connectCharacter(player.Character or player.CharacterAdded:Wait())
+end;
+task.spawn(C_6c);
+-- StarterGui.voltage.coolio.TabFrame5.total.LocalScript
+local function C_70()
+local script = G2L["70"];
+	local ts = script.Parent
+	
+	
+	local RunService = game:GetService("RunService")
+	local player = game.Players.LocalPlayer
+	local playerName = player.Name
+	local l = true
+	
+	RunService.Heartbeat:Connect(function()
+		if l then
+			local strength = game.ReplicatedStorage.Data[playerName].Strength.Value
+			local formattedStrength = strength
+	
+			if formattedStrength >= 1e12 then
+				formattedStrength = string.format("%.2fT", formattedStrength / 1e12)
+			elseif formattedStrength >= 1e9 then
+				formattedStrength = string.format("%.2fB", formattedStrength / 1e9)
+			elseif formattedStrength >= 1e6 then
+				formattedStrength = string.format("%.2fM", formattedStrength / 1e6)
+			elseif formattedStrength >= 1e3 then
+				formattedStrength = string.format("%.2fK", formattedStrength / 1e3)
+			end
+	
+			ts.Text = formattedStrength .. " | " .. strength
+		end
+	end)
+end;
+task.spawn(C_70);
+-- StarterGui.voltage.coolio.TabBtn5.LocalScript
+local function C_74()
+local script = G2L["74"];
+	--Variables--
+	local a = script.Parent
+	local one = script.Parent.Parent.TabFrame1
+	local two = script.Parent.Parent.TabFrame2
+	local three = script.Parent.Parent.TabFrame3
+	local four = script.Parent.Parent.TabFrame4
+	local five = script.Parent.Parent.TabFrame5
+	local front = script.Parent.Parent["front pagess"]
+	
+	--Code--
+	a.MouseButton1Click:Connect(function()
+		one.Visible = false
+		two.Visible = false
+		three.Visible = false
+		four.Visible = false
+		five.Visible = true
+		front.Visible = false
+		
+	
+	end)
+end;
+task.spawn(C_74);
+-- StarterGui.voltage.coolio.Front Page.LocalScript
+local function C_78()
+local script = G2L["78"];
+	--Variables--
+	local a = script.Parent
+	local one = script.Parent.Parent.TabFrame1
+	local two = script.Parent.Parent.TabFrame2
+	local three = script.Parent.Parent.TabFrame3
+	local four = script.Parent.Parent.TabFrame4
+	local five = script.Parent.Parent.TabFrame5
+	local front = script.Parent.Parent["front pagess"]
+	
+	--Code--
+	a.MouseButton1Click:Connect(function()
+		one.Visible = false
+		two.Visible = false
+		three.Visible = false
+		four.Visible = false
+		five.Visible = false
+		front.Visible = true
+	end)
+end;
+task.spawn(C_78);
+
+return G2L["1"], require;
