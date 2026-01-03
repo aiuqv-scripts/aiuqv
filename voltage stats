@@ -7,194 +7,418 @@
  Y888P  ~Y8888P' Y888888P      888888D      Y88888P ~Y8888P' YP   YP  CONVERTER 
 ]=]
 
--- Instances: 21 | Scripts: 7 | Modules: 0 | Tags: 0
+-- Instances: 46 | Scripts: 11 | Modules: 0 | Tags: 0
 local G2L = {};
 
--- StarterGui.new stats gui
+-- StarterGui.voltage stats
 G2L["1"] = Instance.new("ScreenGui", game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui"));
-G2L["1"]["Name"] = [[new stats gui]];
+G2L["1"]["Name"] = [[voltage stats]];
 G2L["1"]["ZIndexBehavior"] = Enum.ZIndexBehavior.Sibling;
 
 
--- StarterGui.new stats gui.Frame
-G2L["2"] = Instance.new("Frame", G2L["1"]);
-G2L["2"]["Visible"] = false;
-G2L["2"]["BorderSizePixel"] = 0;
-G2L["2"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["2"]["Size"] = UDim2.new(0, 100, 0, 100);
-G2L["2"]["Position"] = UDim2.new(0.03266, 0, 0.47737, 0);
-G2L["2"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-
-
--- StarterGui.new stats gui.Frame.drag
-G2L["3"] = Instance.new("LocalScript", G2L["2"]);
-G2L["3"]["Name"] = [[drag]];
-
-
--- StarterGui.new stats gui.Frame.Sps
-G2L["4"] = Instance.new("TextLabel", G2L["2"]);
-G2L["4"]["TextWrapped"] = true;
-G2L["4"]["BorderSizePixel"] = 0;
-G2L["4"]["TextSize"] = 70;
-G2L["4"]["BackgroundColor3"] = Color3.fromRGB(19, 4, 240);
-G2L["4"]["FontFace"] = Font.new([[rbxasset://fonts/families/Creepster.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
-G2L["4"]["TextColor3"] = Color3.fromRGB(225, 59, 240);
-G2L["4"]["Size"] = UDim2.new(0, 274, 0, 152);
-G2L["4"]["BorderColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["4"]["Text"] = [[Sps]];
-G2L["4"]["Name"] = [[Sps]];
-G2L["4"]["Position"] = UDim2.new(-0.39004, 0, -0.18, 0);
-
-
--- StarterGui.new stats gui.Frame.Sps.LocalScript
-G2L["5"] = Instance.new("LocalScript", G2L["4"]);
+-- StarterGui.voltage stats.LocalScript
+G2L["2"] = Instance.new("LocalScript", G2L["1"]);
 
 
 
--- StarterGui.new stats gui.Frame.Sps.UICorner
-G2L["6"] = Instance.new("UICorner", G2L["4"]);
-G2L["6"]["CornerRadius"] = UDim.new(0, 38);
+-- StarterGui.voltage stats.stats
+G2L["3"] = Instance.new("Frame", G2L["1"]);
+G2L["3"]["Visible"] = false;
+G2L["3"]["BorderSizePixel"] = 0;
+G2L["3"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["3"]["Size"] = UDim2.new(0, 316, 0, 563);
+G2L["3"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["3"]["Name"] = [[stats]];
+G2L["3"]["BackgroundTransparency"] = 0.15;
 
 
--- StarterGui.new stats gui.Frame.Sps.TextLabel
-G2L["7"] = Instance.new("TextLabel", G2L["4"]);
+-- StarterGui.voltage stats.stats.drag
+G2L["4"] = Instance.new("LocalScript", G2L["3"]);
+G2L["4"]["Name"] = [[drag]];
+
+
+-- StarterGui.voltage stats.stats.UICorner
+G2L["5"] = Instance.new("UICorner", G2L["3"]);
+
+
+
+-- StarterGui.voltage stats.stats.UIStroke
+G2L["6"] = Instance.new("UIStroke", G2L["3"]);
+G2L["6"]["Thickness"] = 2;
+G2L["6"]["Color"] = Color3.fromRGB(163, 0, 255);
+G2L["6"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
+
+
+-- StarterGui.voltage stats.stats.TitleText
+G2L["7"] = Instance.new("TextLabel", G2L["3"]);
 G2L["7"]["BorderSizePixel"] = 0;
-G2L["7"]["TextSize"] = 50;
-G2L["7"]["BackgroundColor3"] = Color3.fromRGB(19, 4, 240);
-G2L["7"]["FontFace"] = Font.new([[rbxasset://fonts/families/Creepster.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
-G2L["7"]["TextColor3"] = Color3.fromRGB(225, 59, 240);
-G2L["7"]["Size"] = UDim2.new(0, 200, 0, 50);
+G2L["7"]["TextSize"] = 45;
+G2L["7"]["BackgroundColor3"] = Color3.fromRGB(163, 0, 255);
+G2L["7"]["FontFace"] = Font.new([[rbxasset://fonts/families/Zekton.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["7"]["TextColor3"] = Color3.fromRGB(193, 66, 255);
+G2L["7"]["BackgroundTransparency"] = 1;
+G2L["7"]["Size"] = UDim2.new(1, 0, 0.1088, 0);
 G2L["7"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["7"]["Text"] = [[gui]];
-G2L["7"]["Position"] = UDim2.new(0.16058, 0, 0, 0);
+G2L["7"]["Text"] = [[Voltage Stats]];
+G2L["7"]["Name"] = [[TitleText]];
+G2L["7"]["Position"] = UDim2.new(-0.00115, 0, -0.00187, 0);
 
 
--- StarterGui.new stats gui.Frame.Open/Close1
-G2L["8"] = Instance.new("TextButton", G2L["2"]);
+-- StarterGui.voltage stats.stats.line
+G2L["8"] = Instance.new("TextButton", G2L["3"]);
+G2L["8"]["Interactable"] = false;
 G2L["8"]["BorderSizePixel"] = 0;
-G2L["8"]["TextSize"] = 20;
-G2L["8"]["TextColor3"] = Color3.fromRGB(225, 59, 240);
-G2L["8"]["BackgroundColor3"] = Color3.fromRGB(19, 4, 240);
-G2L["8"]["FontFace"] = Font.new([[rbxasset://fonts/families/Creepster.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
-G2L["8"]["Size"] = UDim2.new(0, 20, 0, 25);
+G2L["8"]["TextSize"] = 14;
+G2L["8"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["8"]["BackgroundColor3"] = Color3.fromRGB(175, 0, 244);
+G2L["8"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["8"]["Selectable"] = false;
+G2L["8"]["BackgroundTransparency"] = 0.4;
+G2L["8"]["Size"] = UDim2.new(0, 315, 0, -3);
 G2L["8"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["8"]["Text"] = [[X]];
-G2L["8"]["Name"] = [[Open/Close1]];
-G2L["8"]["Position"] = UDim2.new(-0.24449, 0, -0.05, 0);
+G2L["8"]["Text"] = [[]];
+G2L["8"]["Name"] = [[line]];
+G2L["8"]["Position"] = UDim2.new(-0.00316, 0, 0.10648, 0);
 
 
--- StarterGui.new stats gui.Frame.Open/Close1.LocalScript
-G2L["9"] = Instance.new("LocalScript", G2L["8"]);
+-- StarterGui.voltage stats.stats.ImageLabel
+G2L["9"] = Instance.new("ImageLabel", G2L["3"]);
+G2L["9"]["BorderSizePixel"] = 0;
+G2L["9"]["ScaleType"] = Enum.ScaleType.Fit;
+G2L["9"]["BackgroundColor3"] = Color3.fromRGB(163, 0, 255);
+G2L["9"]["ImageColor3"] = Color3.fromRGB(235, 0, 255);
+G2L["9"]["Image"] = [[rbxassetid://86721820108224]];
+G2L["9"]["Size"] = UDim2.new(0, 97, 0, 68);
+G2L["9"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["9"]["BackgroundTransparency"] = 1;
+G2L["9"]["Position"] = UDim2.new(0.77944, 0, -0.00361, 0);
 
 
+-- StarterGui.voltage stats.stats.ImageLabel
+G2L["a"] = Instance.new("ImageLabel", G2L["3"]);
+G2L["a"]["BorderSizePixel"] = 0;
+G2L["a"]["ScaleType"] = Enum.ScaleType.Fit;
+G2L["a"]["BackgroundColor3"] = Color3.fromRGB(163, 0, 255);
+G2L["a"]["ImageColor3"] = Color3.fromRGB(235, 0, 255);
+G2L["a"]["Image"] = [[rbxassetid://86721820108224]];
+G2L["a"]["Size"] = UDim2.new(0, 97, 0, 68);
+G2L["a"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["a"]["BackgroundTransparency"] = 1;
+G2L["a"]["Position"] = UDim2.new(-0.08132, 0, -0.00361, 0);
 
--- StarterGui.new stats gui.Frame.Open/Close1.UICorner
-G2L["a"] = Instance.new("UICorner", G2L["8"]);
-G2L["a"]["CornerRadius"] = UDim.new(9, 9);
 
-
--- StarterGui.new stats gui.Frame.Weight Count
-G2L["b"] = Instance.new("TextLabel", G2L["2"]);
-G2L["b"]["TextWrapped"] = true;
+-- StarterGui.voltage stats.stats.total
+G2L["b"] = Instance.new("TextLabel", G2L["3"]);
+G2L["b"]["Interactable"] = false;
 G2L["b"]["BorderSizePixel"] = 0;
-G2L["b"]["TextSize"] = 20;
-G2L["b"]["TextScaled"] = true;
-G2L["b"]["BackgroundColor3"] = Color3.fromRGB(19, 4, 240);
-G2L["b"]["FontFace"] = Font.new([[rbxasset://fonts/families/Creepster.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
-G2L["b"]["TextColor3"] = Color3.fromRGB(225, 59, 240);
-G2L["b"]["Size"] = UDim2.new(0, 247, 0, 35);
-G2L["b"]["BorderColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["b"]["Text"] = [[Weights]];
-G2L["b"]["Name"] = [[Weight Count]];
-G2L["b"]["Position"] = UDim2.new(-0.24889, 0, 0.99336, 0);
+G2L["b"]["TextSize"] = 30;
+G2L["b"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["b"]["FontFace"] = Font.new([[rbxasset://fonts/families/Zekton.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["b"]["TextColor3"] = Color3.fromRGB(159, 21, 244);
+G2L["b"]["BackgroundTransparency"] = 0.2;
+G2L["b"]["Size"] = UDim2.new(0, 316, 0, 48);
+G2L["b"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["b"]["Text"] = [[total]];
+G2L["b"]["Name"] = [[total]];
+G2L["b"]["Position"] = UDim2.new(-0.00261, 0, 0.11139, 0);
 
 
--- StarterGui.new stats gui.Frame.Weight Count.LocalScript
+-- StarterGui.voltage stats.stats.total.LocalScript
 G2L["c"] = Instance.new("LocalScript", G2L["b"]);
 
 
 
--- StarterGui.new stats gui.Frame.Weight Count.UICorner
+-- StarterGui.voltage stats.stats.total.UICorner
 G2L["d"] = Instance.new("UICorner", G2L["b"]);
-G2L["d"]["CornerRadius"] = UDim.new(0, 70);
+G2L["d"]["CornerRadius"] = UDim.new(1, 0);
 
 
--- StarterGui.new stats gui.Frame.Ping
-G2L["e"] = Instance.new("TextLabel", G2L["2"]);
-G2L["e"]["TextWrapped"] = true;
-G2L["e"]["BorderSizePixel"] = 0;
-G2L["e"]["TextSize"] = 20;
-G2L["e"]["TextScaled"] = true;
-G2L["e"]["BackgroundColor3"] = Color3.fromRGB(19, 4, 240);
-G2L["e"]["FontFace"] = Font.new([[rbxasset://fonts/families/Creepster.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
-G2L["e"]["TextColor3"] = Color3.fromRGB(225, 59, 240);
-G2L["e"]["Size"] = UDim2.new(0, 57, 0, 42);
-G2L["e"]["BorderColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["e"]["Text"] = [[Ping]];
-G2L["e"]["Name"] = [[Ping]];
-G2L["e"]["Position"] = UDim2.new(1.64796, 0, 0.36221, 0);
+-- StarterGui.voltage stats.stats.total.UIStroke
+G2L["e"] = Instance.new("UIStroke", G2L["b"]);
+G2L["e"]["Color"] = Color3.fromRGB(159, 21, 244);
+G2L["e"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
 
 
--- StarterGui.new stats gui.Frame.Ping.LocalScript
-G2L["f"] = Instance.new("LocalScript", G2L["e"]);
+-- StarterGui.voltage stats.stats.sps
+G2L["f"] = Instance.new("TextLabel", G2L["3"]);
+G2L["f"]["Interactable"] = false;
+G2L["f"]["BorderSizePixel"] = 0;
+G2L["f"]["TextSize"] = 30;
+G2L["f"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["f"]["FontFace"] = Font.new([[rbxasset://fonts/families/Zekton.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["f"]["TextColor3"] = Color3.fromRGB(159, 21, 244);
+G2L["f"]["BackgroundTransparency"] = 0.2;
+G2L["f"]["Size"] = UDim2.new(0, 316, 0, 48);
+G2L["f"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["f"]["Text"] = [[sps]];
+G2L["f"]["Name"] = [[sps]];
+G2L["f"]["Position"] = UDim2.new(0, 0, 0.29, 0);
 
 
-
--- StarterGui.new stats gui.Frame.Timer
-G2L["10"] = Instance.new("TextLabel", G2L["2"]);
-G2L["10"]["TextWrapped"] = true;
-G2L["10"]["BorderSizePixel"] = 0;
-G2L["10"]["TextSize"] = 35;
-G2L["10"]["BackgroundColor3"] = Color3.fromRGB(19, 4, 240);
-G2L["10"]["FontFace"] = Font.new([[rbxasset://fonts/families/Creepster.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
-G2L["10"]["TextColor3"] = Color3.fromRGB(225, 59, 240);
-G2L["10"]["BackgroundTransparency"] = 10;
-G2L["10"]["Size"] = UDim2.new(0, 144, 0, 42);
-G2L["10"]["BorderColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["10"]["Text"] = [[Time]];
-G2L["10"]["Name"] = [[Timer]];
-G2L["10"]["Position"] = UDim2.new(0.27353, 0, -0.59, 0);
-
-
--- StarterGui.new stats gui.Frame.Timer.LocalScript
-G2L["11"] = Instance.new("LocalScript", G2L["10"]);
+-- StarterGui.voltage stats.stats.sps.LocalScript
+G2L["10"] = Instance.new("LocalScript", G2L["f"]);
 
 
 
--- StarterGui.new stats gui.Frame.Timer.UICorner
-G2L["12"] = Instance.new("UICorner", G2L["10"]);
-G2L["12"]["CornerRadius"] = UDim.new(1, 0);
+-- StarterGui.voltage stats.stats.sps.UICorner
+G2L["11"] = Instance.new("UICorner", G2L["f"]);
+G2L["11"]["CornerRadius"] = UDim.new(1, 0);
 
 
--- StarterGui.new stats gui.Frame.Gain
-G2L["13"] = Instance.new("TextLabel", G2L["2"]);
-G2L["13"]["TextWrapped"] = true;
+-- StarterGui.voltage stats.stats.sps.UIStroke
+G2L["12"] = Instance.new("UIStroke", G2L["f"]);
+G2L["12"]["Color"] = Color3.fromRGB(159, 21, 244);
+G2L["12"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
+
+
+-- StarterGui.voltage stats.stats.spm
+G2L["13"] = Instance.new("TextLabel", G2L["3"]);
+G2L["13"]["Interactable"] = false;
 G2L["13"]["BorderSizePixel"] = 0;
-G2L["13"]["TextSize"] = 20;
-G2L["13"]["TextScaled"] = true;
-G2L["13"]["BackgroundColor3"] = Color3.fromRGB(19, 4, 240);
-G2L["13"]["FontFace"] = Font.new([[rbxasset://fonts/families/Creepster.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
-G2L["13"]["TextColor3"] = Color3.fromRGB(225, 59, 240);
-G2L["13"]["Size"] = UDim2.new(0, 82, 0, 35);
-G2L["13"]["BorderColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["13"]["Text"] = [[Gain]];
-G2L["13"]["Name"] = [[Gain]];
-G2L["13"]["Position"] = UDim2.new(-0.30889, 0, 0.40336, 0);
+G2L["13"]["TextSize"] = 30;
+G2L["13"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["13"]["FontFace"] = Font.new([[rbxasset://fonts/families/Zekton.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["13"]["TextColor3"] = Color3.fromRGB(159, 21, 244);
+G2L["13"]["BackgroundTransparency"] = 0.2;
+G2L["13"]["Size"] = UDim2.new(0, 316, 0, 48);
+G2L["13"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["13"]["Text"] = [[spm]];
+G2L["13"]["Name"] = [[spm]];
+G2L["13"]["Position"] = UDim2.new(-0.00267, 0, 0.38358, 0);
 
 
--- StarterGui.new stats gui.Frame.Gain.LocalScript
+-- StarterGui.voltage stats.stats.spm.LocalScript
 G2L["14"] = Instance.new("LocalScript", G2L["13"]);
 
 
 
--- StarterGui.new stats gui.Frame.Gain.UICorner
+-- StarterGui.voltage stats.stats.spm.UICorner
 G2L["15"] = Instance.new("UICorner", G2L["13"]);
-G2L["15"]["CornerRadius"] = UDim.new(0, 70);
+G2L["15"]["CornerRadius"] = UDim.new(1, 0);
 
 
--- StarterGui.new stats gui.Frame.drag
-local function C_3()
-local script = G2L["3"];
+-- StarterGui.voltage stats.stats.spm.UIStroke
+G2L["16"] = Instance.new("UIStroke", G2L["13"]);
+G2L["16"]["Color"] = Color3.fromRGB(159, 21, 244);
+G2L["16"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
+
+
+-- StarterGui.voltage stats.stats.sph
+G2L["17"] = Instance.new("TextLabel", G2L["3"]);
+G2L["17"]["Interactable"] = false;
+G2L["17"]["BorderSizePixel"] = 0;
+G2L["17"]["TextSize"] = 30;
+G2L["17"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["17"]["FontFace"] = Font.new([[rbxasset://fonts/families/Zekton.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["17"]["TextColor3"] = Color3.fromRGB(159, 21, 244);
+G2L["17"]["BackgroundTransparency"] = 0.2;
+G2L["17"]["Size"] = UDim2.new(0, 316, 0, 48);
+G2L["17"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["17"]["Text"] = [[sph]];
+G2L["17"]["Name"] = [[sph]];
+G2L["17"]["Position"] = UDim2.new(-0.00267, 0, 0.48475, 0);
+
+
+-- StarterGui.voltage stats.stats.sph.LocalScript
+G2L["18"] = Instance.new("LocalScript", G2L["17"]);
+
+
+
+-- StarterGui.voltage stats.stats.sph.UICorner
+G2L["19"] = Instance.new("UICorner", G2L["17"]);
+G2L["19"]["CornerRadius"] = UDim.new(1, 0);
+
+
+-- StarterGui.voltage stats.stats.sph.UIStroke
+G2L["1a"] = Instance.new("UIStroke", G2L["17"]);
+G2L["1a"]["Color"] = Color3.fromRGB(159, 21, 244);
+G2L["1a"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
+
+
+-- StarterGui.voltage stats.stats.spd
+G2L["1b"] = Instance.new("TextLabel", G2L["3"]);
+G2L["1b"]["Interactable"] = false;
+G2L["1b"]["BorderSizePixel"] = 0;
+G2L["1b"]["TextSize"] = 30;
+G2L["1b"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["1b"]["FontFace"] = Font.new([[rbxasset://fonts/families/Zekton.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["1b"]["TextColor3"] = Color3.fromRGB(159, 21, 244);
+G2L["1b"]["BackgroundTransparency"] = 0.2;
+G2L["1b"]["Size"] = UDim2.new(0, 316, 0, 48);
+G2L["1b"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["1b"]["Text"] = [[spd]];
+G2L["1b"]["Name"] = [[spd]];
+G2L["1b"]["Position"] = UDim2.new(-0.00267, 0, 0.58604, 0);
+
+
+-- StarterGui.voltage stats.stats.spd.LocalScript
+G2L["1c"] = Instance.new("LocalScript", G2L["1b"]);
+
+
+
+-- StarterGui.voltage stats.stats.spd.UICorner
+G2L["1d"] = Instance.new("UICorner", G2L["1b"]);
+G2L["1d"]["CornerRadius"] = UDim.new(1, 0);
+
+
+-- StarterGui.voltage stats.stats.spd.UIStroke
+G2L["1e"] = Instance.new("UIStroke", G2L["1b"]);
+G2L["1e"]["Color"] = Color3.fromRGB(159, 21, 244);
+G2L["1e"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
+
+
+-- StarterGui.voltage stats.stats.spm
+G2L["1f"] = Instance.new("TextLabel", G2L["3"]);
+G2L["1f"]["Interactable"] = false;
+G2L["1f"]["BorderSizePixel"] = 0;
+G2L["1f"]["TextSize"] = 30;
+G2L["1f"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["1f"]["FontFace"] = Font.new([[rbxasset://fonts/families/Zekton.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["1f"]["TextColor3"] = Color3.fromRGB(159, 21, 244);
+G2L["1f"]["BackgroundTransparency"] = 0.2;
+G2L["1f"]["Size"] = UDim2.new(0, 316, 0, 48);
+G2L["1f"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["1f"]["Text"] = [[spm]];
+G2L["1f"]["Name"] = [[spm]];
+G2L["1f"]["Position"] = UDim2.new(0.00049, 0, 0.68757, 0);
+
+
+-- StarterGui.voltage stats.stats.spm.LocalScript
+G2L["20"] = Instance.new("LocalScript", G2L["1f"]);
+
+
+
+-- StarterGui.voltage stats.stats.spm.UICorner
+G2L["21"] = Instance.new("UICorner", G2L["1f"]);
+G2L["21"]["CornerRadius"] = UDim.new(1, 0);
+
+
+-- StarterGui.voltage stats.stats.spm.UIStroke
+G2L["22"] = Instance.new("UIStroke", G2L["1f"]);
+G2L["22"]["Color"] = Color3.fromRGB(159, 21, 244);
+G2L["22"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
+
+
+-- StarterGui.voltage stats.stats.spy
+G2L["23"] = Instance.new("TextLabel", G2L["3"]);
+G2L["23"]["Interactable"] = false;
+G2L["23"]["BorderSizePixel"] = 0;
+G2L["23"]["TextSize"] = 30;
+G2L["23"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["23"]["FontFace"] = Font.new([[rbxasset://fonts/families/Zekton.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["23"]["TextColor3"] = Color3.fromRGB(159, 21, 244);
+G2L["23"]["BackgroundTransparency"] = 0.2;
+G2L["23"]["Size"] = UDim2.new(0, 316, 0, 48);
+G2L["23"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["23"]["Text"] = [[spy]];
+G2L["23"]["Name"] = [[spy]];
+G2L["23"]["Position"] = UDim2.new(-0.00267, 0, 0.78775, 0);
+
+
+-- StarterGui.voltage stats.stats.spy.LocalScript
+G2L["24"] = Instance.new("LocalScript", G2L["23"]);
+
+
+
+-- StarterGui.voltage stats.stats.spy.UICorner
+G2L["25"] = Instance.new("UICorner", G2L["23"]);
+G2L["25"]["CornerRadius"] = UDim.new(1, 0);
+
+
+-- StarterGui.voltage stats.stats.spy.UIStroke
+G2L["26"] = Instance.new("UIStroke", G2L["23"]);
+G2L["26"]["Color"] = Color3.fromRGB(159, 21, 244);
+G2L["26"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
+
+
+-- StarterGui.voltage stats.stats.timer
+G2L["27"] = Instance.new("TextLabel", G2L["3"]);
+G2L["27"]["Interactable"] = false;
+G2L["27"]["BorderSizePixel"] = 0;
+G2L["27"]["TextSize"] = 30;
+G2L["27"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["27"]["FontFace"] = Font.new([[rbxasset://fonts/families/Zekton.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["27"]["TextColor3"] = Color3.fromRGB(159, 21, 244);
+G2L["27"]["BackgroundTransparency"] = 0.2;
+G2L["27"]["Size"] = UDim2.new(0, 316, 0, 48);
+G2L["27"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["27"]["Text"] = [[time]];
+G2L["27"]["Name"] = [[timer]];
+G2L["27"]["Position"] = UDim2.new(0.00049, 0, 0.88713, 0);
+
+
+-- StarterGui.voltage stats.stats.timer.LocalScript
+G2L["28"] = Instance.new("LocalScript", G2L["27"]);
+
+
+
+-- StarterGui.voltage stats.stats.timer.UICorner
+G2L["29"] = Instance.new("UICorner", G2L["27"]);
+G2L["29"]["CornerRadius"] = UDim.new(1, 0);
+
+
+-- StarterGui.voltage stats.stats.timer.UIStroke
+G2L["2a"] = Instance.new("UIStroke", G2L["27"]);
+G2L["2a"]["Color"] = Color3.fromRGB(159, 21, 244);
+G2L["2a"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
+
+
+-- StarterGui.voltage stats.stats.sps
+G2L["2b"] = Instance.new("TextLabel", G2L["3"]);
+G2L["2b"]["Interactable"] = false;
+G2L["2b"]["BorderSizePixel"] = 0;
+G2L["2b"]["TextSize"] = 30;
+G2L["2b"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["2b"]["FontFace"] = Font.new([[rbxasset://fonts/families/Zekton.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["2b"]["TextColor3"] = Color3.fromRGB(159, 21, 244);
+G2L["2b"]["BackgroundTransparency"] = 0.2;
+G2L["2b"]["Size"] = UDim2.new(0, 316, 0, 48);
+G2L["2b"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["2b"]["Text"] = [[gained]];
+G2L["2b"]["Name"] = [[sps]];
+G2L["2b"]["Position"] = UDim2.new(0.00049, 0, 0.19943, 0);
+
+
+-- StarterGui.voltage stats.stats.sps.LocalScript
+G2L["2c"] = Instance.new("LocalScript", G2L["2b"]);
+
+
+
+-- StarterGui.voltage stats.stats.sps.UICorner
+G2L["2d"] = Instance.new("UICorner", G2L["2b"]);
+G2L["2d"]["CornerRadius"] = UDim.new(1, 0);
+
+
+-- StarterGui.voltage stats.stats.sps.UIStroke
+G2L["2e"] = Instance.new("UIStroke", G2L["2b"]);
+G2L["2e"]["Color"] = Color3.fromRGB(159, 21, 244);
+G2L["2e"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
+
+
+-- StarterGui.voltage stats.LocalScript
+local function C_2()
+local script = G2L["2"];
+	local UserInputService = game:GetService("UserInputService")
+	
+	local screenGui = script.Parent -- assumes the LocalScript is inside the ScreenGui
+	local toggleKey = Enum.KeyCode.X
+	
+	local isVisible = true
+	
+	UserInputService.InputBegan:Connect(function(input, gameProcessed)
+		if gameProcessed then return end
+	
+		if input.KeyCode == toggleKey then
+			isVisible = not isVisible
+			screenGui.Enabled = isVisible
+		end
+	end)
+	
+end;
+task.spawn(C_2);
+-- StarterGui.voltage stats.stats.drag
+local function C_4()
+local script = G2L["4"];
 	local UIS = game:GetService("UserInputService")
 	local frame = script.Parent
 	
@@ -230,117 +454,311 @@ local script = G2L["3"];
 		end
 	end)
 end;
-task.spawn(C_3);
--- StarterGui.new stats gui.Frame.Sps.LocalScript
-local function C_5()
-local script = G2L["5"];
-	local label = script.Parent  -- The TextLabel
-	local player = game.Players.LocalPlayer
-	local leaderstats = player:WaitForChild("leaderstats")  -- Wait for leaderstats
-	local strengthStat = leaderstats:WaitForChild("Strength")  -- Get Strength stat
-	
-	local previousStrength = strengthStat.Value  -- Initial Strength
-	local sps = 0  -- Strength Per Second
-	
-	while true do
-		local startStrength = strengthStat.Value  -- Get current Strength
-		wait(1)  -- Wait for 1 second
-		local endStrength = strengthStat.Value  -- Get updated Strength
-	
-		sps = endStrength - startStrength  -- Calculate SPS
-		label.Text = " " .. sps  -- Update the TextLabel
-	end
-	
-end;
-task.spawn(C_5);
--- StarterGui.new stats gui.Frame.Open/Close1.LocalScript
-local function C_9()
-local script = G2L["9"];
-	local button = script.Parent -- Get the button
-	local gui = button.Parent -- Get the GUI that contains the button
-	local clickCount = 0 -- Click counter
-	
-	button.MouseButton1Click:Connect(function()
-		clickCount = clickCount + 1 -- Increase click count
-	
-		if clickCount == 2 then
-			gui:Destroy() -- Delete the GUI after two clicks
-		end
-	end)
-	
-end;
-task.spawn(C_9);
--- StarterGui.new stats gui.Frame.Weight Count.LocalScript
+task.spawn(C_4);
+-- StarterGui.voltage stats.stats.total.LocalScript
 local function C_c()
 local script = G2L["c"];
-	local textLabel = script.Parent -- The TextLabel where the tool count will be displayed
-	local player = game.Players.LocalPlayer
-	local backpack = player:FindFirstChild("Backpack")
+	local ts = script.Parent
 	
-	local function updateToolCount()
-		if backpack then
-			textLabel.Text = " " .. #backpack:GetChildren()
-		end
-	end
-	
-	-- Update when a tool is added or removed
-	backpack.ChildAdded:Connect(updateToolCount)
-	backpack.ChildRemoved:Connect(updateToolCount)
-	
-	-- Initial update
-	updateToolCount()
-	
-end;
-task.spawn(C_c);
--- StarterGui.new stats gui.Frame.Ping.LocalScript
-local function C_f()
-local script = G2L["f"];
-	local textLabel = script.Parent -- Assuming this script is inside the TextLabel
 	
 	local RunService = game:GetService("RunService")
-	
-	local function updatePing()
-		while true do
-			local ping = math.floor(game:GetService("Stats").Network.ServerStatsItem["Data Ping"]:GetValue()) -- Get ping
-			textLabel.Text = " " .. ping .. " ms"
-			wait(1) -- Update every second
-		end
-	end
-	
-	task.spawn(updatePing) -- Start updating
-	
-end;
-task.spawn(C_f);
--- StarterGui.new stats gui.Frame.Timer.LocalScript
-local function C_11()
-local script = G2L["11"];
 	local player = game.Players.LocalPlayer
-	local startTime = os.time() -- Store the time when the player joins
-	local textLabel = script.Parent -- Make sure the TextLabel is a child of this script
+	local playerName = player.Name
+	local l = true
 	
-	local function updateTime()
-		while task.wait(1) do
-			local elapsedTime = os.time() - startTime
-			local hours = math.floor(elapsedTime / 3600)
-			local minutes = math.floor((elapsedTime % 3600) / 60)
-			local seconds = elapsedTime % 60
+	RunService.Heartbeat:Connect(function()
+		if l then
+			local strength = game.ReplicatedStorage.Data[playerName].Strength.Value
+			local formattedStrength = strength
 	
-			-- Format the time (HH:MM:SS)
-			textLabel.Text = string.format(": %02d:%02d:%02d", hours, minutes, seconds)
+			if formattedStrength >= 1e12 then
+				formattedStrength = string.format("%.2fT", formattedStrength / 1e12)
+			elseif formattedStrength >= 1e9 then
+				formattedStrength = string.format("%.2fB", formattedStrength / 1e9)
+			elseif formattedStrength >= 1e6 then
+				formattedStrength = string.format("%.2fM", formattedStrength / 1e6)
+			elseif formattedStrength >= 1e3 then
+				formattedStrength = string.format("%.2fK", formattedStrength / 1e3)
+			end
+	
+			ts.Text = formattedStrength .. " | " .. strength
+		end
+	end)
+end;
+task.spawn(C_c);
+-- StarterGui.voltage stats.stats.sps.LocalScript
+local function C_10()
+local script = G2L["10"];
+	local label = script.Parent
+	local player = game:GetService("Players").LocalPlayer
+	local leaderstats = player:WaitForChild("leaderstats")
+	local strengthStat = leaderstats:WaitForChild("Strength")
+	local index = -1
+	
+	local function shortFormat(n)
+		if n >= 1e12 then
+			return string.format("%.2fT", n / 1e12)
+		elseif n >= 1e9 then
+			return string.format("%.2fB", n / 1e9)
+		elseif n >= 1e6 then
+			return string.format("%.2fM", n / 1e6)
+		elseif n >= 1e3 then
+			return string.format("%.2fK", n / 1e3)
+		else
+			return tostring(math.floor(n))
 		end
 	end
 	
-	-- Run the update loop
-	task.spawn(updateTime)
+	while true do
+		index += 1
+		local before = strengthStat.Value
+		task.wait(1)
+	
+		if index <= 3 then
+			label.Text = "..."
+		else
+			local sps = strengthStat.Value - before
+			label.Text = "Sps = " .. shortFormat(sps)
+		end
+	end
 	
 end;
-task.spawn(C_11);
--- StarterGui.new stats gui.Frame.Gain.LocalScript
+task.spawn(C_10);
+-- StarterGui.voltage stats.stats.spm.LocalScript
 local function C_14()
 local script = G2L["14"];
-	local textLabel = script.Parent -- The TextLabel where Strength gained will be displayed
+	local label = script.Parent
+	local player = game:GetService("Players").LocalPlayer
+	local leaderstats = player:WaitForChild("leaderstats")
+	local strengthStat = leaderstats:WaitForChild("Strength")
+	local index = -1
+	
+	local function shortFormat(n)
+		if n >= 1e12 then
+			return string.format("%.2fT", n / 1e12)
+		elseif n >= 1e9 then
+			return string.format("%.2fB", n / 1e9)
+		elseif n >= 1e6 then
+			return string.format("%.2fM", n / 1e6)
+		elseif n >= 1e3 then
+			return string.format("%.2fK", n / 1e3)
+		else
+			return tostring(math.floor(n))
+		end
+	end
+	
+	while true do
+		index += 1
+		local before = strengthStat.Value
+		task.wait(1)
+	
+		if index <= 3 then
+			label.Text = "..."
+		else
+			local sps = strengthStat.Value - before
+			local spm = sps * 60
+			label.Text = "Spm = " .. shortFormat(spm)
+		end
+	end
+	
+end;
+task.spawn(C_14);
+-- StarterGui.voltage stats.stats.sph.LocalScript
+local function C_18()
+local script = G2L["18"];
+	local label = script.Parent
+	local player = game:GetService("Players").LocalPlayer
+	local leaderstats = player:WaitForChild("leaderstats")
+	local strengthStat = leaderstats:WaitForChild("Strength")
+	local index = -1
+	
+	local function shortFormat(n)
+		if n >= 1e12 then
+			return string.format("%.2fT", n / 1e12)
+		elseif n >= 1e9 then
+			return string.format("%.2fB", n / 1e9)
+		elseif n >= 1e6 then
+			return string.format("%.2fM", n / 1e6)
+		elseif n >= 1e3 then
+			return string.format("%.2fK", n / 1e3)
+		else
+			return tostring(math.floor(n))
+		end
+	end
+	
+	while true do
+		index += 1
+		local before = strengthStat.Value
+		task.wait(1)
+	
+		if index <= 3 then
+			label.Text = "..."
+		else
+			local sps = strengthStat.Value - before
+			local sph = sps * 3600
+			label.Text = "Sph = " .. shortFormat(sph)
+		end
+	end
+	
+end;
+task.spawn(C_18);
+-- StarterGui.voltage stats.stats.spd.LocalScript
+local function C_1c()
+local script = G2L["1c"];
+	local label = script.Parent
+	local player = game:GetService("Players").LocalPlayer
+	local leaderstats = player:WaitForChild("leaderstats")
+	local strengthStat = leaderstats:WaitForChild("Strength")
+	local index = -1
+	
+	local function shortFormat(n)
+		if n >= 1e12 then
+			return string.format("%.2fT", n / 1e12)
+		elseif n >= 1e9 then
+			return string.format("%.2fB", n / 1e9)
+		elseif n >= 1e6 then
+			return string.format("%.2fM", n / 1e6)
+		elseif n >= 1e3 then
+			return string.format("%.2fK", n / 1e3)
+		else
+			return tostring(math.floor(n))
+		end
+	end
+	
+	while true do
+		index += 1
+		local before = strengthStat.Value
+		task.wait(1)
+	
+		if index <= 3 then
+			label.Text = "..."
+		else
+			local gainedPerSecond = strengthStat.Value - before
+			local gainedPerDay = gainedPerSecond * 86400
+	
+			label.Text = "Spd = " .. shortFormat(gainedPerDay)
+		end
+	end
+	
+end;
+task.spawn(C_1c);
+-- StarterGui.voltage stats.stats.spm.LocalScript
+local function C_20()
+local script = G2L["20"];
+	local label = script.Parent
+	local player = game:GetService("Players").LocalPlayer
+	local leaderstats = player:WaitForChild("leaderstats")
+	local strengthStat = leaderstats:WaitForChild("Strength")
+	local index = -1
+	
+	local function shortFormat(n)
+		if n >= 1e12 then
+			return string.format("%.2fT", n / 1e12)
+		elseif n >= 1e9 then
+			return string.format("%.2fB", n / 1e9)
+		elseif n >= 1e6 then
+			return string.format("%.2fM", n / 1e6)
+		elseif n >= 1e3 then
+			return string.format("%.2fK", n / 1e3)
+		else
+			return tostring(math.floor(n))
+		end
+	end
+	
+	while true do
+		index += 1
+		local before = strengthStat.Value
+		task.wait(1)
+	
+		if index <= 3 then
+			label.Text = "..."
+		else
+			local gainedPerSecond = strengthStat.Value - before
+			local gainedPerMonth = gainedPerSecond * 2592000 -- 30 days
+	
+			label.Text = "Spm = " .. shortFormat(gainedPerMonth)
+		end
+	end
+	
+end;
+task.spawn(C_20);
+-- StarterGui.voltage stats.stats.spy.LocalScript
+local function C_24()
+local script = G2L["24"];
+	local label = script.Parent
+	local player = game:GetService("Players").LocalPlayer
+	local leaderstats = player:WaitForChild("leaderstats")
+	local strengthStat = leaderstats:WaitForChild("Strength")
+	local index = -1
+	
+	local function shortFormat(n)
+		if n >= 1e12 then
+			return string.format("%.2fT", n / 1e12)
+		elseif n >= 1e9 then
+			return string.format("%.2fB", n / 1e9)
+		elseif n >= 1e6 then
+			return string.format("%.2fM", n / 1e6)
+		elseif n >= 1e3 then
+			return string.format("%.2fK", n / 1e3)
+		else
+			return tostring(math.floor(n))
+		end
+	end
+	
+	while true do
+		index += 1
+		local before = strengthStat.Value
+		task.wait(1)
+	
+		if index <= 3 then
+			label.Text = "..."
+		else
+			local gainedPerSecond = strengthStat.Value - before
+			local gainedPerYear = gainedPerSecond * 31536000
+	
+			label.Text = "Spy = " .. shortFormat(gainedPerYear)
+		end
+	end
+	
+end;
+task.spawn(C_24);
+-- StarterGui.voltage stats.stats.timer.LocalScript
+local function C_28()
+local script = G2L["28"];
+	local label = script.Parent
+	local totalSeconds = 0
+	
+	while true do
+		task.wait(1)
+		totalSeconds += 1
+	
+		local months = math.floor(totalSeconds / (30 * 86400))
+		local weeks = math.floor((totalSeconds % (30 * 86400)) / (7 * 86400))
+		local days = math.floor((totalSeconds % (7 * 86400)) / 86400)
+		local hours = math.floor((totalSeconds % 86400) / 3600)
+		local minutes = math.floor((totalSeconds % 3600) / 60)
+		local seconds = totalSeconds % 60
+	
+		label.Text = string.format(
+			"%02dM %02dW %02dD %02d:%02d:%02d",
+			months,
+			weeks,
+			days,
+			hours,
+			minutes,
+			seconds
+		)
+	end
+	
+end;
+task.spawn(C_28);
+-- StarterGui.voltage stats.stats.sps.LocalScript
+local function C_2c()
+local script = G2L["2c"];
+	local textLabel = script.Parent
 	local player = game.Players.LocalPlayer
 	local strengthStat = player:FindFirstChild("leaderstats") and player.leaderstats:FindFirstChild("Strength")
+	local runService = game:GetService("RunService")
 	
 	if not strengthStat then
 		warn("Strength stat not found in leaderstats!")
@@ -354,18 +772,17 @@ local script = G2L["14"];
 		local currentStrength = strengthStat.Value
 		local strengthDifference = currentStrength - lastStrength
 		totalStrengthGained = totalStrengthGained + strengthDifference
-		lastStrength = currentStrength -- Update the last recorded strength
+		lastStrength = currentStrength 
 	
 		textLabel.Text = " " .. totalStrengthGained
 	end
 	
-	-- Update every second
-	while true do
+	
+	runService.RenderStepped:Connect(function()
 		updateStrengthGained()
-		wait(1)
-	end
+	end)
 	
 end;
-task.spawn(C_14);
+task.spawn(C_2c);
 
 return G2L["1"], require;
