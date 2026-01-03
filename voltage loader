@@ -21,7 +21,6 @@ G2L["1"]["ResetOnSpawn"] = false;
 
 -- StarterGui.voltage loading screen.MainFrame
 G2L["2"] = Instance.new("Frame", G2L["1"]);
-G2L["2"]["Visible"] = false;
 G2L["2"]["BorderSizePixel"] = 0;
 G2L["2"]["BackgroundColor3"] = Color3.fromRGB(55, 8, 84);
 G2L["2"]["Size"] = UDim2.new(1, 0, 1, 0);
@@ -44,7 +43,7 @@ G2L["3"]["Size"] = UDim2.new(0.63253, 0, 0.16535, 0);
 G2L["3"]["BorderColor3"] = Color3.fromRGB(28, 43, 54);
 G2L["3"]["Text"] = [[Voltage]];
 G2L["3"]["Name"] = [[Title]];
-G2L["3"]["Position"] = UDim2.new(0.19036, 0, 0.32338, 0);
+G2L["3"]["Position"] = UDim2.new(0.19036, 0, 0.37157, 0);
 
 
 -- StarterGui.voltage loading screen.MainFrame.Dots
@@ -208,7 +207,7 @@ G2L["19"] = Instance.new("Frame", G2L["13"]);
 G2L["19"]["BorderSizePixel"] = 0;
 G2L["19"]["BackgroundColor3"] = Color3.fromRGB(55, 8, 84);
 G2L["19"]["Size"] = UDim2.new(-0.80629, 0, 0.25187, 0);
-G2L["19"]["Position"] = UDim2.new(0.90266, 0, -11.733, 0);
+G2L["19"]["Position"] = UDim2.new(0.89784, 0, -10.3828, 0);
 G2L["19"]["BorderColor3"] = Color3.fromRGB(28, 43, 54);
 G2L["19"]["Name"] = [[bar between loading voltage]];
 
@@ -266,7 +265,7 @@ G2L["1f"]["Size"] = UDim2.new(0.63253, 0, 0.16535, 0);
 G2L["1f"]["BorderColor3"] = Color3.fromRGB(28, 43, 54);
 G2L["1f"]["Text"] = [[Loading!]];
 G2L["1f"]["Name"] = [[Loading]];
-G2L["1f"]["Position"] = UDim2.new(0.19036, 0, 0.50169, 0);
+G2L["1f"]["Position"] = UDim2.new(0.19036, 0, 0.58121, 0);
 
 
 -- StarterGui.voltage loading screen.MainFrame.welcomer
@@ -284,7 +283,7 @@ G2L["20"]["Size"] = UDim2.new(0.63253, 0, 0.16535, 0);
 G2L["20"]["BorderColor3"] = Color3.fromRGB(28, 43, 54);
 G2L["20"]["Text"] = [[Welcome!]];
 G2L["20"]["Name"] = [[welcomer]];
-G2L["20"]["Position"] = UDim2.new(0.16873, 0, 0.03422, 0);
+G2L["20"]["Position"] = UDim2.new(0.16873, 0, 0.01133, 0);
 
 
 -- StarterGui.voltage loading screen.MainFrame.welcomer.LocalScript
@@ -297,9 +296,9 @@ G2L["22"] = Instance.new("ImageLabel", G2L["20"]);
 G2L["22"]["BorderSizePixel"] = 0;
 G2L["22"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["22"]["Image"] = [[rbxasset://textures/ui/GuiImagePlaceholder.png]];
-G2L["22"]["Size"] = UDim2.new(0, 100, 0, 100);
+G2L["22"]["Size"] = UDim2.new(0, 134, 0, 133);
 G2L["22"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["22"]["Position"] = UDim2.new(0.47286, 0, 0.99827, 0);
+G2L["22"]["Position"] = UDim2.new(0.42729, 0, 0.79424, 0);
 
 
 -- StarterGui.voltage loading screen.MainFrame.welcomer.ImageLabel.LocalScript
@@ -322,12 +321,11 @@ G2L["24"]["Size"] = UDim2.new(0.63253, 0, 0.16535, 0);
 G2L["24"]["BorderColor3"] = Color3.fromRGB(28, 43, 54);
 G2L["24"]["Text"] = [[Is]];
 G2L["24"]["Name"] = [[Title]];
-G2L["24"]["Position"] = UDim2.new(0.18315, 0, 0.41615, 0);
+G2L["24"]["Position"] = UDim2.new(0.18045, 0, 0.47518, 0);
 
 
 -- StarterGui.voltage loading screen.EndSequence
 G2L["25"] = Instance.new("Frame", G2L["1"]);
-G2L["25"]["Visible"] = false;
 G2L["25"]["BorderSizePixel"] = 0;
 G2L["25"]["BackgroundColor3"] = Color3.fromRGB(21, 21, 21);
 G2L["25"]["Size"] = UDim2.new(1, 0, 1, 0);
