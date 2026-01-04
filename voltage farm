@@ -7,7 +7,7 @@
  Y888P  ~Y8888P' Y888888P      888888D      Y88888P ~Y8888P' YP   YP  CONVERTER 
 ]=]
 
--- Instances: 129 | Scripts: 30 | Modules: 0 | Tags: 0
+-- Instances: 130 | Scripts: 31 | Modules: 0 | Tags: 0
 local G2L = {};
 
 -- StarterGui.voltage
@@ -512,6 +512,7 @@ G2L["3b"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
 
 -- StarterGui.voltage.coolio.TabFrame4
 G2L["3c"] = Instance.new("Frame", G2L["2"]);
+G2L["3c"]["Visible"] = false;
 G2L["3c"]["BorderSizePixel"] = 0;
 G2L["3c"]["BackgroundColor3"] = Color3.fromRGB(163, 0, 255);
 G2L["3c"]["Size"] = UDim2.new(1, 0, 0.82176, 0);
@@ -556,7 +557,6 @@ G2L["3f"]["Size"] = UDim2.new(0.49877, 0, 0.6502, 0);
 G2L["3f"]["BorderColor3"] = Color3.fromRGB(159, 21, 244);
 G2L["3f"]["Text"] = [[Fps]];
 G2L["3f"]["Name"] = [[fps]];
-G2L["3f"]["Visible"] = false;
 G2L["3f"]["Position"] = UDim2.new(0.32165, 0, 0.06006, 0);
 
 
@@ -1101,6 +1101,11 @@ G2L["81"]["Size"] = UDim2.new(0, 116, 0, 114);
 G2L["81"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["81"]["BackgroundTransparency"] = 1;
 G2L["81"]["Position"] = UDim2.new(0.41405, 0, 0.29262, 0);
+
+
+-- StarterGui.voltage.coolio.LocalScript
+G2L["82"] = Instance.new("LocalScript", G2L["2"]);
+
 
 
 -- StarterGui.voltage.coolio.drag
@@ -2002,5 +2007,26 @@ local script = G2L["78"];
 	end)
 end;
 task.spawn(C_78);
+-- StarterGui.voltage.coolio.LocalScript
+local function C_82()
+local script = G2L["82"];
+	local UserInputService = game:GetService("UserInputService")
+	
+	local screenGui = script.Parent 
+	local toggleKey = Enum.KeyCode.X
+	
+	local isVisible = true
+	
+	UserInputService.InputBegan:Connect(function(input, gameProcessed)
+		if gameProcessed then return end
+	
+		if input.KeyCode == toggleKey then
+			isVisible = not isVisible
+			screenGui.Enabled = isVisible
+		end
+	end)
+	
+end;
+task.spawn(C_82);
 
 return G2L["1"], require;
